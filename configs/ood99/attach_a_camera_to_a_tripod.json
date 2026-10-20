@@ -1,0 +1,43 @@
+{
+  "task_name": "attach_a_camera_to_a_tripod",
+  "instance_id": 301,
+  "seed": 20261020,
+  "target_key": "digital_camera.n.01_1",
+  "target_keys": [
+    "digital_camera.n.01_1"
+  ],
+  "target_description": "digital camera",
+  "placements": [
+    {
+      "key": "digital_camera.n.01_1",
+      "relation": "ontop",
+      "support_key": "floor.n.01_1",
+      "ancestors": [
+        {
+          "relation": "ontop",
+          "object_key": "floor.n.01_1"
+        }
+      ]
+    }
+  ],
+  "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+  "ood_axis": "new_object_positions_plus_initial_search_heading",
+  "minimum_relocation_m": 0.08,
+  "placement_attempts": 12,
+  "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+  "goal": "寻找并接近digital camera；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+  "acceptance": {
+    "max_horizontal_distance_m": 1.0,
+    "min_target_pixels": 16,
+    "initial_all_targets_invisible": true,
+    "planner_reached_required": true,
+    "original_task_completion_required": false
+  },
+  "status": "designed_not_simulator_validated",
+  "definition_sha256": "60e939c877d0f6e49d821fcbe71214c348cd7f7456cb43e769b05060b81c2d93",
+  "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+  "limitations": [
+    "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+    "One public-test instance and one seed per task; not a robust task success-rate estimate."
+  ]
+}

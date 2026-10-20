@@ -1,0 +1,5311 @@
+[
+  {
+    "task_name": "assembling_gift_baskets",
+    "instance_id": 301,
+    "seed": 20271019,
+    "target_key": "wicker_basket.n.01_1",
+    "target_keys": [
+      "wicker_basket.n.01_1",
+      "wicker_basket.n.01_2",
+      "wicker_basket.n.01_3",
+      "wicker_basket.n.01_4"
+    ],
+    "target_description": "wicker basket",
+    "placements": [
+      {
+        "key": "wicker_basket.n.01_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "wicker_basket.n.01_2",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "wicker_basket.n.01_3",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "wicker_basket.n.01_4",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 24,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近wicker basket；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "6e6c82bae96d3b4efaf3026ed84c2e0ea1aefa57e2f4763c51d2c2fe7b96267e",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ],
+    "floor_target_cluster_half_angle_deg": 35,
+    "minimum_initial_distance_m": 1.25,
+    "design_revision": 2,
+    "revision_reason": "First candidate was initially visible; constrain floor placements to a distant angular sector without changing support relations. No policy actions occurred in rejected candidate."
+  },
+  {
+    "task_name": "attach_a_camera_to_a_tripod",
+    "instance_id": 301,
+    "seed": 20261020,
+    "target_key": "digital_camera.n.01_1",
+    "target_keys": [
+      "digital_camera.n.01_1"
+    ],
+    "target_description": "digital camera",
+    "placements": [
+      {
+        "key": "digital_camera.n.01_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近digital camera；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "60e939c877d0f6e49d821fcbe71214c348cd7f7456cb43e769b05060b81c2d93",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "boxing_books_up_for_storage",
+    "instance_id": 301,
+    "seed": 20261021,
+    "target_key": "box.n.01_1",
+    "target_keys": [
+      "box.n.01_1"
+    ],
+    "target_description": "box",
+    "placements": [
+      {
+        "key": "box.n.01_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近box；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "f9390495b5f55154080f84da11282c8b8610f6eb20461796cd1ae804f17604f7",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "boxing_food_after_dinner",
+    "instance_id": 301,
+    "seed": 20261022,
+    "target_key": "tupperware.n.01_1",
+    "target_keys": [
+      "tupperware.n.01_1"
+    ],
+    "target_description": "tupperware",
+    "placements": [
+      {
+        "key": "tupperware.n.01_1",
+        "relation": "inside",
+        "support_key": "cabinet.n.01_1",
+        "ancestors": [
+          {
+            "relation": "inside",
+            "object_key": "cabinet.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近tupperware；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "807ff776b31242fd2a478d884217e16c350062ae531a93fb77406237c5753c3a",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "bringing_in_wood",
+    "instance_id": 301,
+    "seed": 20261023,
+    "target_key": "plywood.n.01_1",
+    "target_keys": [
+      "plywood.n.01_1",
+      "plywood.n.01_2",
+      "plywood.n.01_3"
+    ],
+    "target_description": "plywood",
+    "placements": [
+      {
+        "key": "plywood.n.01_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "plywood.n.01_2",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "plywood.n.01_3",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近plywood；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "bf157bd45031dfe3db3054536bd76c861448498cb801a929f253927ad09706f0",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "bringing_paper_to_recycling",
+    "instance_id": 301,
+    "seed": 20261024,
+    "target_key": "sack.n.01_1",
+    "target_keys": [
+      "sack.n.01_1"
+    ],
+    "target_description": "sack",
+    "placements": [
+      {
+        "key": "sack.n.01_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近sack；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "7482ea993cf43e69f61191108c181224229a5c0b14d86c2e639b35b9987e98d7",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "bringing_water",
+    "instance_id": 301,
+    "seed": 20261025,
+    "target_key": "bottle.n.01_1",
+    "target_keys": [
+      "bottle.n.01_1",
+      "bottle.n.01_2"
+    ],
+    "target_description": "bottle",
+    "placements": [
+      {
+        "key": "bottle.n.01_1",
+        "relation": "inside",
+        "support_key": "electric_refrigerator.n.01_1",
+        "ancestors": [
+          {
+            "relation": "inside",
+            "object_key": "electric_refrigerator.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "bottle.n.01_2",
+        "relation": "inside",
+        "support_key": "electric_refrigerator.n.01_1",
+        "ancestors": [
+          {
+            "relation": "inside",
+            "object_key": "electric_refrigerator.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近bottle；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "90e7602fbec064f90c21e7921f582209b2a7a3436afd823231166c69ae489297",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "can_meat",
+    "instance_id": 301,
+    "seed": 20261026,
+    "target_key": "hinged_jar.n.01_1",
+    "target_keys": [
+      "hinged_jar.n.01_1",
+      "hinged_jar.n.01_2"
+    ],
+    "target_description": "hinged jar",
+    "placements": [
+      {
+        "key": "hinged_jar.n.01_1",
+        "relation": "inside",
+        "support_key": "cabinet.n.01_1",
+        "ancestors": [
+          {
+            "relation": "inside",
+            "object_key": "cabinet.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "hinged_jar.n.01_2",
+        "relation": "inside",
+        "support_key": "cabinet.n.01_1",
+        "ancestors": [
+          {
+            "relation": "inside",
+            "object_key": "cabinet.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近hinged jar；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "1862f9bb2fdeb8f528b499e4cf6167aa188321032cf57a1f072de13808383505",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "canning_food",
+    "instance_id": 301,
+    "seed": 20261027,
+    "target_key": "carving_knife.n.01_1",
+    "target_keys": [
+      "carving_knife.n.01_1"
+    ],
+    "target_description": "carving knife",
+    "placements": [
+      {
+        "key": "carving_knife.n.01_1",
+        "relation": "ontop",
+        "support_key": "chopping_board.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "chopping_board.n.01_1"
+          },
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近carving knife；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "9a48bd418004101880d6f0089a5f99c27dbd279a182025904dbd5212dac34d98",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "carrying_in_groceries",
+    "instance_id": 301,
+    "seed": 20261028,
+    "target_key": "sack.n.01_1",
+    "target_keys": [
+      "sack.n.01_1"
+    ],
+    "target_description": "sack",
+    "placements": [
+      {
+        "key": "sack.n.01_1",
+        "relation": "inside",
+        "support_key": "car.n.01_1",
+        "ancestors": [
+          {
+            "relation": "inside",
+            "object_key": "car.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近sack；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "ac2895980b3688800a188814b6d47f248ec74be2d779c1126cb27a0eff6ae236",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "carrying_out_garden_furniture",
+    "instance_id": 301,
+    "seed": 20261029,
+    "target_key": "barrow.n.03_1",
+    "target_keys": [
+      "barrow.n.03_1"
+    ],
+    "target_description": "barrow",
+    "placements": [
+      {
+        "key": "barrow.n.03_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近barrow；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "8da2796cbfd1724c32506ed4e65427fbee79a5026cef8d3c55a81312c100c1af",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "chop_an_onion",
+    "instance_id": 301,
+    "seed": 20261030,
+    "target_key": "parer.n.02_1",
+    "target_keys": [
+      "parer.n.02_1"
+    ],
+    "target_description": "parer",
+    "placements": [
+      {
+        "key": "parer.n.02_1",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近parer；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "16120ceda62efa21454fbba4f2a77db52a2c79b768747f3f14373aab206ebb63",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "chopping_wood",
+    "instance_id": 301,
+    "seed": 20261031,
+    "target_key": "ax.n.01_1",
+    "target_keys": [
+      "ax.n.01_1"
+    ],
+    "target_description": "ax",
+    "placements": [
+      {
+        "key": "ax.n.01_1",
+        "relation": "ontop",
+        "support_key": "driveway.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "driveway.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近ax；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "2ec0e9adb666075101c888d43b1c0ef48434ab0051d80de20eb49bf75fb04837",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "clean_a_keyboard",
+    "instance_id": 301,
+    "seed": 20261032,
+    "target_key": "pipe_cleaner.n.01_1",
+    "target_keys": [
+      "pipe_cleaner.n.01_1"
+    ],
+    "target_description": "pipe cleaner",
+    "placements": [
+      {
+        "key": "pipe_cleaner.n.01_1",
+        "relation": "ontop",
+        "support_key": "desk.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "desk.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近pipe cleaner；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "ad7b0abd3167816e4d617a80533a231aaa55a48ed8e25b67bd1d3013066b70ec",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "clean_a_patio",
+    "instance_id": 301,
+    "seed": 20261033,
+    "target_key": "broom.n.01_1",
+    "target_keys": [
+      "broom.n.01_1"
+    ],
+    "target_description": "broom",
+    "placements": [
+      {
+        "key": "broom.n.01_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近broom；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "70445355444eea08edd874531c35e43d94c9e0f0c65a310d3655931883688f15",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "clean_a_trumpet",
+    "instance_id": 301,
+    "seed": 20261034,
+    "target_key": "cornet.n.01_1",
+    "target_keys": [
+      "cornet.n.01_1"
+    ],
+    "target_description": "cornet",
+    "placements": [
+      {
+        "key": "cornet.n.01_1",
+        "relation": "ontop",
+        "support_key": "desk.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "desk.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近cornet；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "3d6019ad5d1f0e4e110217bdba0b43bd4ca0757ad9daae6e873ae5cfa8ffdedb",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "clean_boxing_gloves",
+    "instance_id": 301,
+    "seed": 20261035,
+    "target_key": "boxing_glove.n.01_1",
+    "target_keys": [
+      "boxing_glove.n.01_1",
+      "boxing_glove.n.01_2"
+    ],
+    "target_description": "boxing glove",
+    "placements": [
+      {
+        "key": "boxing_glove.n.01_1",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "boxing_glove.n.01_2",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近boxing glove；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "66d60d8be91af3a343e47286eb99d8569c4d65419d5aae8d0af0efb2d8a6a976",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "clean_up_broken_glass",
+    "instance_id": 301,
+    "seed": 20261036,
+    "target_key": "ashcan.n.01_1",
+    "target_keys": [
+      "ashcan.n.01_1"
+    ],
+    "target_description": "ashcan",
+    "placements": [
+      {
+        "key": "ashcan.n.01_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_2",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_2"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近ashcan；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "c06613f86a7afad2d04b71492389ab9bba157eeb75795204e1700b80030dfaac",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "clean_up_your_desk",
+    "instance_id": 301,
+    "seed": 20261037,
+    "target_key": "stapler.n.01_1",
+    "target_keys": [
+      "stapler.n.01_1"
+    ],
+    "target_description": "stapler",
+    "placements": [
+      {
+        "key": "stapler.n.01_1",
+        "relation": "inside",
+        "support_key": "bookcase.n.01_1",
+        "ancestors": [
+          {
+            "relation": "inside",
+            "object_key": "bookcase.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近stapler；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "c81e592bf14dd7b2fbbc2a443a5f4989e5d0d038f20c27cc91a4339b3d14318e",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "clean_your_rusty_garden_tools",
+    "instance_id": 301,
+    "seed": 20261038,
+    "target_key": "scraper.n.01_1",
+    "target_keys": [
+      "scraper.n.01_1"
+    ],
+    "target_description": "scraper",
+    "placements": [
+      {
+        "key": "scraper.n.01_1",
+        "relation": "ontop",
+        "support_key": "driveway.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "driveway.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近scraper；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "ce75b76f03e771c55d00eae27e5611602d0c7b7c5f48057c857f76342b022c5b",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "cleaning_up_branches_and_twigs",
+    "instance_id": 301,
+    "seed": 20261039,
+    "target_key": "recycling_bin.n.01_1",
+    "target_keys": [
+      "recycling_bin.n.01_1"
+    ],
+    "target_description": "recycling bin",
+    "placements": [
+      {
+        "key": "recycling_bin.n.01_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近recycling bin；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "a64272314473e3e02549af27925680551ac0763574b8e1139629231ece1db37b",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "cleaning_up_plates_and_food",
+    "instance_id": 301,
+    "seed": 20261040,
+    "target_key": "bowl.n.01_1",
+    "target_keys": [
+      "bowl.n.01_1",
+      "bowl.n.01_2"
+    ],
+    "target_description": "bowl",
+    "placements": [
+      {
+        "key": "bowl.n.01_1",
+        "relation": "ontop",
+        "support_key": "breakfast_table.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "breakfast_table.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "bowl.n.01_2",
+        "relation": "ontop",
+        "support_key": "breakfast_table.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "breakfast_table.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近bowl；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "3af8e2b962d4793e6a89439f5ca9998044eb3c1bf9aa919a8e1e62bccdaf0d74",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "clearing_food_from_table_into_fridge",
+    "instance_id": 301,
+    "seed": 20261041,
+    "target_key": "tupperware.n.01_1",
+    "target_keys": [
+      "tupperware.n.01_1",
+      "tupperware.n.01_2"
+    ],
+    "target_description": "tupperware",
+    "placements": [
+      {
+        "key": "tupperware.n.01_1",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "tupperware.n.01_2",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近tupperware；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "840d8330b9a0e3d93f5d0f5ceb1880b4cd00c6fc44caac2eed002d9339f6b872",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "collecting_aluminum_cans",
+    "instance_id": 301,
+    "seed": 20261042,
+    "target_key": "bucket.n.01_1",
+    "target_keys": [
+      "bucket.n.01_1"
+    ],
+    "target_description": "bucket",
+    "placements": [
+      {
+        "key": "bucket.n.01_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近bucket；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "150dad84ed3b27019fc5850af6946c2c5342be4600e98728ff131e4e71b4ccbd",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "collecting_childrens_toys",
+    "instance_id": 301,
+    "seed": 20261043,
+    "target_key": "teddy.n.01_1",
+    "target_keys": [
+      "teddy.n.01_1",
+      "teddy.n.01_2"
+    ],
+    "target_description": "teddy",
+    "placements": [
+      {
+        "key": "teddy.n.01_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "teddy.n.01_2",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近teddy；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "5c7ffb5883b200455c3ac6838aaade37ef991ac48b67850b73ae5947f7a18bba",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "composting_waste",
+    "instance_id": 301,
+    "seed": 20261044,
+    "target_key": "half__banana.n.01_1",
+    "target_keys": [
+      "half__banana.n.01_1"
+    ],
+    "target_description": "half banana",
+    "placements": [
+      {
+        "key": "half__banana.n.01_1",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近half banana；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "66663f3d27e4f38dd93d81097a5bb853919ae04208e17ad2f957a3727bba3f4e",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "cook_a_brisket",
+    "instance_id": 301,
+    "seed": 20261045,
+    "target_key": "brisket.n.01_1",
+    "target_keys": [
+      "brisket.n.01_1"
+    ],
+    "target_description": "brisket",
+    "placements": [
+      {
+        "key": "brisket.n.01_1",
+        "relation": "inside",
+        "support_key": "electric_refrigerator.n.01_1",
+        "ancestors": [
+          {
+            "relation": "inside",
+            "object_key": "electric_refrigerator.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近brisket；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "7253ab392e533c90b1f768e17428578487243d8f123caf6e9337f8c3a23cd11f",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "cook_a_frozen_pie",
+    "instance_id": 301,
+    "seed": 20261046,
+    "target_key": "apple_pie.n.01_1",
+    "target_keys": [
+      "apple_pie.n.01_1"
+    ],
+    "target_description": "apple pie",
+    "placements": [
+      {
+        "key": "apple_pie.n.01_1",
+        "relation": "inside",
+        "support_key": "electric_refrigerator.n.01_1",
+        "ancestors": [
+          {
+            "relation": "inside",
+            "object_key": "electric_refrigerator.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近apple pie；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "e8558c44ac148b100195a6e9b3725cc0f18dd23ea826f29327c874dcd6bd3387",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "cook_bacon",
+    "instance_id": 301,
+    "seed": 20261047,
+    "target_key": "bacon.n.01_1",
+    "target_keys": [
+      "bacon.n.01_1",
+      "bacon.n.01_2",
+      "bacon.n.01_3",
+      "bacon.n.01_4",
+      "bacon.n.01_5",
+      "bacon.n.01_6"
+    ],
+    "target_description": "bacon",
+    "placements": [
+      {
+        "key": "bacon.n.01_1",
+        "relation": "ontop",
+        "support_key": "tray.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "tray.n.01_1"
+          },
+          {
+            "relation": "inside",
+            "object_key": "electric_refrigerator.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "bacon.n.01_2",
+        "relation": "ontop",
+        "support_key": "tray.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "tray.n.01_1"
+          },
+          {
+            "relation": "inside",
+            "object_key": "electric_refrigerator.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "bacon.n.01_3",
+        "relation": "ontop",
+        "support_key": "tray.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "tray.n.01_1"
+          },
+          {
+            "relation": "inside",
+            "object_key": "electric_refrigerator.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "bacon.n.01_4",
+        "relation": "ontop",
+        "support_key": "tray.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "tray.n.01_1"
+          },
+          {
+            "relation": "inside",
+            "object_key": "electric_refrigerator.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "bacon.n.01_5",
+        "relation": "ontop",
+        "support_key": "tray.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "tray.n.01_1"
+          },
+          {
+            "relation": "inside",
+            "object_key": "electric_refrigerator.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "bacon.n.01_6",
+        "relation": "ontop",
+        "support_key": "tray.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "tray.n.01_1"
+          },
+          {
+            "relation": "inside",
+            "object_key": "electric_refrigerator.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近bacon；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "1dca6a5d0b54bb71c654bb9730c381943d722b163a6d0e54bfccc5f609dcccdd",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "cook_broccolini",
+    "instance_id": 301,
+    "seed": 20261048,
+    "target_key": "frying_pan.n.01_1",
+    "target_keys": [
+      "frying_pan.n.01_1"
+    ],
+    "target_description": "frying pan",
+    "placements": [
+      {
+        "key": "frying_pan.n.01_1",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近frying pan；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "838e00bda78d768a1b68d8cb37d372f34c458fb38591c1a1f0338831dc8166ba",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "cook_brussels_sprouts",
+    "instance_id": 301,
+    "seed": 20261049,
+    "target_key": "carving_knife.n.01_1",
+    "target_keys": [
+      "carving_knife.n.01_1"
+    ],
+    "target_description": "carving knife",
+    "placements": [
+      {
+        "key": "carving_knife.n.01_1",
+        "relation": "ontop",
+        "support_key": "chopping_board.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "chopping_board.n.01_1"
+          },
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近carving knife；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "873e5d28271c5b09bb554bde5b378dedfc53d195afbe460d3c6df52294f04367",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "cook_cabbage",
+    "instance_id": 301,
+    "seed": 20261050,
+    "target_key": "head_cabbage.n.02_1",
+    "target_keys": [
+      "head_cabbage.n.02_1"
+    ],
+    "target_description": "head cabbage",
+    "placements": [
+      {
+        "key": "head_cabbage.n.02_1",
+        "relation": "inside",
+        "support_key": "electric_refrigerator.n.01_1",
+        "ancestors": [
+          {
+            "relation": "inside",
+            "object_key": "electric_refrigerator.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近head cabbage；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "af3c543f6c918bfe0f93c8fbc179baae2d304be20d85712cc371432a97b0c571",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "cook_hot_dogs",
+    "instance_id": 301,
+    "seed": 20261051,
+    "target_key": "hotdog.n.02_1",
+    "target_keys": [
+      "hotdog.n.02_1",
+      "hotdog.n.02_2"
+    ],
+    "target_description": "hotdog",
+    "placements": [
+      {
+        "key": "hotdog.n.02_1",
+        "relation": "inside",
+        "support_key": "electric_refrigerator.n.01_1",
+        "ancestors": [
+          {
+            "relation": "inside",
+            "object_key": "electric_refrigerator.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "hotdog.n.02_2",
+        "relation": "inside",
+        "support_key": "electric_refrigerator.n.01_1",
+        "ancestors": [
+          {
+            "relation": "inside",
+            "object_key": "electric_refrigerator.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近hotdog；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "ecfdbe8e432fea1a7fd263e9d249ac219b7a9addaecfee8a6ac01f3c87b1af50",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "dispose_of_batteries",
+    "instance_id": 301,
+    "seed": 20261052,
+    "target_key": "battery.n.02_1",
+    "target_keys": [
+      "battery.n.02_1",
+      "battery.n.02_2",
+      "battery.n.02_3"
+    ],
+    "target_description": "battery",
+    "placements": [
+      {
+        "key": "battery.n.02_1",
+        "relation": "ontop",
+        "support_key": "desk.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "desk.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "battery.n.02_2",
+        "relation": "ontop",
+        "support_key": "desk.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "desk.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "battery.n.02_3",
+        "relation": "ontop",
+        "support_key": "cabinet.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "cabinet.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近battery；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "97cb15d185b2f9d64fde78905929a66598635b191b7d957083e578ecb7b29013",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "dispose_of_glass",
+    "instance_id": 301,
+    "seed": 20261053,
+    "target_key": "water_glass.n.02_1",
+    "target_keys": [
+      "water_glass.n.02_1",
+      "water_glass.n.02_2",
+      "water_glass.n.02_3",
+      "water_glass.n.02_4"
+    ],
+    "target_description": "water glass",
+    "placements": [
+      {
+        "key": "water_glass.n.02_1",
+        "relation": "ontop",
+        "support_key": "sink.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "sink.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "water_glass.n.02_2",
+        "relation": "ontop",
+        "support_key": "sink.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "sink.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "water_glass.n.02_3",
+        "relation": "ontop",
+        "support_key": "sink.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "sink.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "water_glass.n.02_4",
+        "relation": "ontop",
+        "support_key": "sink.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "sink.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近water glass；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "ecbc44ca0272d8783dd1c2e9c9f44e341a5acb175463b1aa2e317329fc56417b",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "freeze_fruit",
+    "instance_id": 301,
+    "seed": 20261054,
+    "target_key": "tupperware.n.01_1",
+    "target_keys": [
+      "tupperware.n.01_1",
+      "tupperware.n.01_2"
+    ],
+    "target_description": "tupperware",
+    "placements": [
+      {
+        "key": "tupperware.n.01_1",
+        "relation": "inside",
+        "support_key": "cabinet.n.01_1",
+        "ancestors": [
+          {
+            "relation": "inside",
+            "object_key": "cabinet.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "tupperware.n.01_2",
+        "relation": "inside",
+        "support_key": "cabinet.n.01_1",
+        "ancestors": [
+          {
+            "relation": "inside",
+            "object_key": "cabinet.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近tupperware；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "5adc41e4393c7b998ea500be3550a8a40cb9ed5ecaab23094b8748876dec9a46",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "freeze_pies",
+    "instance_id": 301,
+    "seed": 20261055,
+    "target_key": "apple_pie.n.01_1",
+    "target_keys": [
+      "apple_pie.n.01_1",
+      "apple_pie.n.01_2"
+    ],
+    "target_description": "apple pie",
+    "placements": [
+      {
+        "key": "apple_pie.n.01_1",
+        "relation": "ontop",
+        "support_key": "plate.n.04_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "plate.n.04_1"
+          },
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "apple_pie.n.01_2",
+        "relation": "ontop",
+        "support_key": "plate.n.04_2",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "plate.n.04_2"
+          },
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近apple pie；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "78671ab6e34b48033a01ea4a97ba072d1268935fff11eb71bf8a200685261870",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "getting_organized_for_work",
+    "instance_id": 301,
+    "seed": 20261056,
+    "target_key": "mouse.n.04_1",
+    "target_keys": [
+      "mouse.n.04_1"
+    ],
+    "target_description": "mouse",
+    "placements": [
+      {
+        "key": "mouse.n.04_1",
+        "relation": "ontop",
+        "support_key": "desk.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "desk.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近mouse；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "b4c6fcb70e1c810484c7b330fb4a2f31997029577c6a28d3fb240d1b58bd2544",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "halve_an_egg",
+    "instance_id": 301,
+    "seed": 20261057,
+    "target_key": "carving_knife.n.01_1",
+    "target_keys": [
+      "carving_knife.n.01_1"
+    ],
+    "target_description": "carving knife",
+    "placements": [
+      {
+        "key": "carving_knife.n.01_1",
+        "relation": "ontop",
+        "support_key": "chopping_board.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "chopping_board.n.01_1"
+          },
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近carving knife；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "e6e8c6b524ddfd00459d01df59536f51d7ad5ae24c397920822573c3c3fa6672",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "hanging_pictures",
+    "instance_id": 301,
+    "seed": 20261058,
+    "target_key": "poster.n.01_1",
+    "target_keys": [
+      "poster.n.01_1"
+    ],
+    "target_description": "poster",
+    "placements": [
+      {
+        "key": "poster.n.01_1",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近poster；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "3fa458a5bd55d6a560014689ae209c5a9c77b88cf830c5bbd46f301a9e46fb80",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "hiding_Easter_eggs",
+    "instance_id": 301,
+    "seed": 20261059,
+    "target_key": "easter_egg.n.01_1",
+    "target_keys": [
+      "easter_egg.n.01_1",
+      "easter_egg.n.01_2",
+      "easter_egg.n.01_3"
+    ],
+    "target_description": "easter egg",
+    "placements": [
+      {
+        "key": "easter_egg.n.01_1",
+        "relation": "inside",
+        "support_key": "wicker_basket.n.01_1",
+        "ancestors": [
+          {
+            "relation": "inside",
+            "object_key": "wicker_basket.n.01_1"
+          },
+          {
+            "relation": "ontop",
+            "object_key": "lawn.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "easter_egg.n.01_2",
+        "relation": "inside",
+        "support_key": "wicker_basket.n.01_1",
+        "ancestors": [
+          {
+            "relation": "inside",
+            "object_key": "wicker_basket.n.01_1"
+          },
+          {
+            "relation": "ontop",
+            "object_key": "lawn.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "easter_egg.n.01_3",
+        "relation": "inside",
+        "support_key": "wicker_basket.n.01_1",
+        "ancestors": [
+          {
+            "relation": "inside",
+            "object_key": "wicker_basket.n.01_1"
+          },
+          {
+            "relation": "ontop",
+            "object_key": "lawn.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近easter egg；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "5af2b53d38a32a30f91108dc4f4119782c045fd27590d17bee76c0bbf4c5beb1",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "installing_a_fax_machine",
+    "instance_id": 301,
+    "seed": 20261060,
+    "target_key": "facsimile.n.02_1",
+    "target_keys": [
+      "facsimile.n.02_1"
+    ],
+    "target_description": "facsimile",
+    "placements": [
+      {
+        "key": "facsimile.n.02_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近facsimile；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "5eb9ba3bade965e05bdc117fe2dca798943dd7a4a48e46686d92f5d7c18df1b3",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "installing_a_modem",
+    "instance_id": 301,
+    "seed": 20261061,
+    "target_key": "modem.n.01_1",
+    "target_keys": [
+      "modem.n.01_1"
+    ],
+    "target_description": "modem",
+    "placements": [
+      {
+        "key": "modem.n.01_1",
+        "relation": "ontop",
+        "support_key": "coffee_table.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "coffee_table.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近modem；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "4965d015fa14a43d2a08c6b11c814db069c052b3c751e4f6540f2e5884c3d8b8",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "installing_a_scanner",
+    "instance_id": 301,
+    "seed": 20261062,
+    "target_key": "scanner.n.02_1",
+    "target_keys": [
+      "scanner.n.02_1"
+    ],
+    "target_description": "scanner",
+    "placements": [
+      {
+        "key": "scanner.n.02_1",
+        "relation": "ontop",
+        "support_key": "table.n.02_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "table.n.02_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近scanner；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "a986dacf967d4185a622f693f0485fbfd0c2c63130727a551f9b011520656d65",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "installing_smoke_detectors",
+    "instance_id": 301,
+    "seed": 20261063,
+    "target_key": "fire_alarm.n.02_1",
+    "target_keys": [
+      "fire_alarm.n.02_1"
+    ],
+    "target_description": "fire alarm",
+    "placements": [
+      {
+        "key": "fire_alarm.n.02_1",
+        "relation": "ontop",
+        "support_key": "table.n.02_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "table.n.02_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近fire alarm；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "f376b8f00019255b73e56cd62825812e926e49787279f23b2ef30c0ca4e9555f",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "laying_tile_floors",
+    "instance_id": 301,
+    "seed": 20261064,
+    "target_key": "tile.n.01_1",
+    "target_keys": [
+      "tile.n.01_1",
+      "tile.n.01_2",
+      "tile.n.01_3",
+      "tile.n.01_4"
+    ],
+    "target_description": "tile",
+    "placements": [
+      {
+        "key": "tile.n.01_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "tile.n.01_2",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "tile.n.01_3",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "tile.n.01_4",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近tile；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "bd85f90fbe495f2c35efc7a9ffa3d2c687cd0411e3e92e40c4de2788e9bd7e2b",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "loading_the_car",
+    "instance_id": 301,
+    "seed": 20261065,
+    "target_key": "digital_camera.n.01_1",
+    "target_keys": [
+      "digital_camera.n.01_1"
+    ],
+    "target_description": "digital camera",
+    "placements": [
+      {
+        "key": "digital_camera.n.01_1",
+        "relation": "ontop",
+        "support_key": "table.n.02_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "table.n.02_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近digital camera；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "c5efe2cb96a090c65bb0ef655a71c1e6143e0a4e379e9f03609d83d593cc6c8a",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "make_cabinet_doors",
+    "instance_id": 301,
+    "seed": 20261066,
+    "target_key": "cabinet_door.n.01_1",
+    "target_keys": [
+      "cabinet_door.n.01_1"
+    ],
+    "target_description": "cabinet door",
+    "placements": [
+      {
+        "key": "cabinet_door.n.01_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近cabinet door；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "c95ab26ec89f82936ad402aa2a9f406aad741aa10379b865ff917430e950ab08",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "make_gift_bags_for_baby_showers",
+    "instance_id": 301,
+    "seed": 20261067,
+    "target_key": "sack.n.01_1",
+    "target_keys": [
+      "sack.n.01_1",
+      "sack.n.01_2"
+    ],
+    "target_description": "sack",
+    "placements": [
+      {
+        "key": "sack.n.01_1",
+        "relation": "ontop",
+        "support_key": "breakfast_table.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "breakfast_table.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "sack.n.01_2",
+        "relation": "ontop",
+        "support_key": "breakfast_table.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "breakfast_table.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近sack；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "bb68cd6b8a63bb56885821dabda0064f245e6617299ba8812d3039a064418892",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "make_microwave_popcorn",
+    "instance_id": 301,
+    "seed": 20261068,
+    "target_key": "popcorn__bag.n.01_1",
+    "target_keys": [
+      "popcorn__bag.n.01_1"
+    ],
+    "target_description": "popcorn bag",
+    "placements": [
+      {
+        "key": "popcorn__bag.n.01_1",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近popcorn bag；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "55bd49b760f5310fc8f698da208c6e20364b6ea659f5690afc1d4bc9726cf099",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "make_pizza",
+    "instance_id": 301,
+    "seed": 20261069,
+    "target_key": "cookie_sheet.n.01_1",
+    "target_keys": [
+      "cookie_sheet.n.01_1"
+    ],
+    "target_description": "cookie sheet",
+    "placements": [
+      {
+        "key": "cookie_sheet.n.01_1",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近cookie sheet；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "c1f24b4d8fa268325f353216932770052aa9ed8955a5b89155af48f60e732b23",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "make_rose_centerpieces",
+    "instance_id": 301,
+    "seed": 20261070,
+    "target_key": "rose.n.01_1",
+    "target_keys": [
+      "rose.n.01_1",
+      "rose.n.01_2",
+      "rose.n.01_3"
+    ],
+    "target_description": "rose",
+    "placements": [
+      {
+        "key": "rose.n.01_1",
+        "relation": "ontop",
+        "support_key": "cabinet.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "cabinet.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "rose.n.01_2",
+        "relation": "ontop",
+        "support_key": "cabinet.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "cabinet.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "rose.n.01_3",
+        "relation": "ontop",
+        "support_key": "cabinet.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "cabinet.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近rose；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "e96f193f8d486ab3361f76334711a1b027981b605a299368d700d74e3195b304",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "moving_boxes_to_storage",
+    "instance_id": 301,
+    "seed": 20261071,
+    "target_key": "storage_container.n.01_1",
+    "target_keys": [
+      "storage_container.n.01_1",
+      "storage_container.n.01_2"
+    ],
+    "target_description": "storage container",
+    "placements": [
+      {
+        "key": "storage_container.n.01_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "storage_container.n.01_2",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近storage container；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "13c91058b0266345eec5a5019b3882f1a1ff794dec5643548b2d42927b700995",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "organizing_art_supplies",
+    "instance_id": 301,
+    "seed": 20261072,
+    "target_key": "glue_stick.n.01_1",
+    "target_keys": [
+      "glue_stick.n.01_1"
+    ],
+    "target_description": "glue stick",
+    "placements": [
+      {
+        "key": "glue_stick.n.01_1",
+        "relation": "ontop",
+        "support_key": "desk.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "desk.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近glue stick；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "f9eb9644f8a873400d55c786ff916db6130715ab10fa5bda1379b201dfee1422",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "organizing_school_stuff",
+    "instance_id": 301,
+    "seed": 20261073,
+    "target_key": "calculator.n.02_1",
+    "target_keys": [
+      "calculator.n.02_1"
+    ],
+    "target_description": "calculator",
+    "placements": [
+      {
+        "key": "calculator.n.02_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近calculator；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "5118c0da1b73f21750fcafd0b2fb1c4859fb5f9cab539f5a62901c582ab183a7",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "outfit_a_basic_toolbox",
+    "instance_id": 301,
+    "seed": 20261074,
+    "target_key": "drill.n.01_1",
+    "target_keys": [
+      "drill.n.01_1"
+    ],
+    "target_description": "drill",
+    "placements": [
+      {
+        "key": "drill.n.01_1",
+        "relation": "ontop",
+        "support_key": "tabletop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "tabletop.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近drill；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "7500c3d563f851e74f083455bd3860ae271c887a64469dee3d76ad461c87e5c1",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "packing_meal_for_delivery",
+    "instance_id": 301,
+    "seed": 20261075,
+    "target_key": "wrapped_hamburger.n.01_1",
+    "target_keys": [
+      "wrapped_hamburger.n.01_1",
+      "wrapped_hamburger.n.01_2",
+      "wrapped_hamburger.n.01_3"
+    ],
+    "target_description": "wrapped hamburger",
+    "placements": [
+      {
+        "key": "wrapped_hamburger.n.01_1",
+        "relation": "ontop",
+        "support_key": "tray.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "tray.n.01_1"
+          },
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "wrapped_hamburger.n.01_2",
+        "relation": "ontop",
+        "support_key": "tray.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "tray.n.01_1"
+          },
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "wrapped_hamburger.n.01_3",
+        "relation": "ontop",
+        "support_key": "tray.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "tray.n.01_1"
+          },
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近wrapped hamburger；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "2112fcf730737fc7bc272e0c70a33d522630759572dfdcec756fc3dc611dd866",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "picking_up_toys",
+    "instance_id": 301,
+    "seed": 20261076,
+    "target_key": "tennis_ball.n.01_1",
+    "target_keys": [
+      "tennis_ball.n.01_1"
+    ],
+    "target_description": "tennis ball",
+    "placements": [
+      {
+        "key": "tennis_ball.n.01_1",
+        "relation": "ontop",
+        "support_key": "table.n.02_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "table.n.02_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近tennis ball；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "146aaa8e9d897202382adcacf142e74380776f1881edc27a6d72ca7b74275006",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "picking_up_trash",
+    "instance_id": 301,
+    "seed": 20261077,
+    "target_key": "can__of__soda.n.01_1",
+    "target_keys": [
+      "can__of__soda.n.01_1",
+      "can__of__soda.n.01_2",
+      "can__of__soda.n.01_3"
+    ],
+    "target_description": "can of soda",
+    "placements": [
+      {
+        "key": "can__of__soda.n.01_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "can__of__soda.n.01_2",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "can__of__soda.n.01_3",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近can of soda；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "4dc802891cc16e91d2531d2b0c19e7bece663ddffd3c218112e3358f2dd459e4",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "polishing_shoes",
+    "instance_id": 301,
+    "seed": 20261078,
+    "target_key": "scrub_brush.n.01_1",
+    "target_keys": [
+      "scrub_brush.n.01_1"
+    ],
+    "target_description": "scrub brush",
+    "placements": [
+      {
+        "key": "scrub_brush.n.01_1",
+        "relation": "ontop",
+        "support_key": "stand.n.04_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "stand.n.04_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近scrub brush；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "1866560549c57feee96608e55943ed3c656184e4dd82548cbf80dab57d8c2c40",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "preparing_lunch_box",
+    "instance_id": 301,
+    "seed": 20261079,
+    "target_key": "packing_box.n.02_1",
+    "target_keys": [
+      "packing_box.n.02_1"
+    ],
+    "target_description": "packing box",
+    "placements": [
+      {
+        "key": "packing_box.n.02_1",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近packing box；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "f1de2c856d25434295813ff1eec15246250057d85c06274a46b65b53c9212e28",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "put_together_a_basic_pruning_kit",
+    "instance_id": 301,
+    "seed": 20261080,
+    "target_key": "pruner.n.02_1",
+    "target_keys": [
+      "pruner.n.02_1"
+    ],
+    "target_description": "pruner",
+    "placements": [
+      {
+        "key": "pruner.n.02_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近pruner；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "36599882052a10aa3b79ddee6eb31e40ce1df2196529f70a9d59855d2dcf2256",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "putting_away_Halloween_decorations",
+    "instance_id": 301,
+    "seed": 20261081,
+    "target_key": "candle.n.01_1",
+    "target_keys": [
+      "candle.n.01_1",
+      "candle.n.01_2",
+      "candle.n.01_3"
+    ],
+    "target_description": "candle",
+    "placements": [
+      {
+        "key": "candle.n.01_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "candle.n.01_2",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "candle.n.01_3",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近candle；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "eff8e5c754a8b20cde58033a6d43c7d64e651350a307965c5e1777588cbe2e48",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "putting_away_toys",
+    "instance_id": 301,
+    "seed": 20261082,
+    "target_key": "toy_figure.n.01_1",
+    "target_keys": [
+      "toy_figure.n.01_1",
+      "toy_figure.n.01_2",
+      "toy_figure.n.01_3",
+      "toy_figure.n.01_4",
+      "toy_figure.n.01_5",
+      "toy_figure.n.01_6",
+      "toy_figure.n.01_7",
+      "toy_figure.n.01_8"
+    ],
+    "target_description": "toy figure",
+    "placements": [
+      {
+        "key": "toy_figure.n.01_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "toy_figure.n.01_2",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "toy_figure.n.01_3",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "toy_figure.n.01_4",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "toy_figure.n.01_5",
+        "relation": "ontop",
+        "support_key": "floor.n.01_2",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_2"
+          }
+        ]
+      },
+      {
+        "key": "toy_figure.n.01_6",
+        "relation": "ontop",
+        "support_key": "floor.n.01_2",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_2"
+          }
+        ]
+      },
+      {
+        "key": "toy_figure.n.01_7",
+        "relation": "ontop",
+        "support_key": "floor.n.01_2",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_2"
+          }
+        ]
+      },
+      {
+        "key": "toy_figure.n.01_8",
+        "relation": "ontop",
+        "support_key": "floor.n.01_2",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_2"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近toy figure；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "be5b2d620e15ed4ca414f9488c8e49476e141d289f5ee87983cdef1e710d8dd8",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "putting_dirty_dishes_in_sink",
+    "instance_id": 301,
+    "seed": 20261083,
+    "target_key": "bowl.n.01_1",
+    "target_keys": [
+      "bowl.n.01_1",
+      "bowl.n.01_2"
+    ],
+    "target_description": "bowl",
+    "placements": [
+      {
+        "key": "bowl.n.01_1",
+        "relation": "ontop",
+        "support_key": "booth.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "booth.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "bowl.n.01_2",
+        "relation": "ontop",
+        "support_key": "booth.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "booth.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近bowl；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "d4ebcc9e444c6b9f448330623d0a4eaef0af1fc2fe8a650e2e8174c61200053b",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "putting_dishes_away_after_cleaning",
+    "instance_id": 301,
+    "seed": 20261084,
+    "target_key": "plate.n.04_1",
+    "target_keys": [
+      "plate.n.04_1",
+      "plate.n.04_2",
+      "plate.n.04_3",
+      "plate.n.04_4",
+      "plate.n.04_5",
+      "plate.n.04_6",
+      "plate.n.04_7",
+      "plate.n.04_8"
+    ],
+    "target_description": "plate",
+    "placements": [
+      {
+        "key": "plate.n.04_1",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "plate.n.04_2",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "plate.n.04_3",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "plate.n.04_4",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "plate.n.04_5",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_2",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_2"
+          }
+        ]
+      },
+      {
+        "key": "plate.n.04_6",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_2",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_2"
+          }
+        ]
+      },
+      {
+        "key": "plate.n.04_7",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_2",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_2"
+          }
+        ]
+      },
+      {
+        "key": "plate.n.04_8",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_2",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_2"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近plate；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "9f4445356bd7f5da5047166efe639f88d6b23688f065659b3ec0a7a892367646",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "putting_shoes_on_rack",
+    "instance_id": 301,
+    "seed": 20261085,
+    "target_key": "gym_shoe.n.01_1",
+    "target_keys": [
+      "gym_shoe.n.01_1",
+      "gym_shoe.n.01_2"
+    ],
+    "target_description": "gym shoe",
+    "placements": [
+      {
+        "key": "gym_shoe.n.01_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "gym_shoe.n.01_2",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近gym shoe；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "323a7477b480735aa1dcf41be5e43287394f2d28328f635f7003b8286f885281",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "putting_up_Christmas_decorations_inside",
+    "instance_id": 301,
+    "seed": 20261086,
+    "target_key": "gift_box.n.01_1",
+    "target_keys": [
+      "gift_box.n.01_1",
+      "gift_box.n.01_2",
+      "gift_box.n.01_3"
+    ],
+    "target_description": "gift box",
+    "placements": [
+      {
+        "key": "gift_box.n.01_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "gift_box.n.01_2",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "gift_box.n.01_3",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近gift box；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "10cf6f3d70edf4eeadf1e79c1f71b2d8122013f24040a2fe22ac902dccadfaae",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "re_shelving_library_books",
+    "instance_id": 301,
+    "seed": 20261087,
+    "target_key": "book.n.02_1",
+    "target_keys": [
+      "book.n.02_1",
+      "book.n.02_2",
+      "book.n.02_3"
+    ],
+    "target_description": "book",
+    "placements": [
+      {
+        "key": "book.n.02_1",
+        "relation": "ontop",
+        "support_key": "table.n.02_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "table.n.02_1"
+          }
+        ]
+      },
+      {
+        "key": "book.n.02_2",
+        "relation": "ontop",
+        "support_key": "table.n.02_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "table.n.02_1"
+          }
+        ]
+      },
+      {
+        "key": "book.n.02_3",
+        "relation": "ontop",
+        "support_key": "table.n.02_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "table.n.02_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近book；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "e2e47f21381e576347339624bb2f773fed5dd1b44cf75ed75c2b0ab93b71ce29",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "rearrange_your_room",
+    "instance_id": 301,
+    "seed": 20261088,
+    "target_key": "tissue_dispenser.n.01_1",
+    "target_keys": [
+      "tissue_dispenser.n.01_1"
+    ],
+    "target_description": "tissue dispenser",
+    "placements": [
+      {
+        "key": "tissue_dispenser.n.01_1",
+        "relation": "ontop",
+        "support_key": "armchair.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "armchair.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近tissue dispenser；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "184b170862a259cd93bf96887b6fb8152220ac46077cbb7d1b6138d156611f89",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "rearranging_kitchen_furniture",
+    "instance_id": 301,
+    "seed": 20261089,
+    "target_key": "toaster.n.02_1",
+    "target_keys": [
+      "toaster.n.02_1"
+    ],
+    "target_description": "toaster",
+    "placements": [
+      {
+        "key": "toaster.n.02_1",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近toaster；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "39c12c14f027d2e24325843695acb36c9a05c2ece88223b408c2fe92166ce47c",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "scrubbing_bathroom_floor",
+    "instance_id": 301,
+    "seed": 20261090,
+    "target_key": "scrub_brush.n.01_1",
+    "target_keys": [
+      "scrub_brush.n.01_1"
+    ],
+    "target_description": "scrub brush",
+    "placements": [
+      {
+        "key": "scrub_brush.n.01_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近scrub brush；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "954c249c54c5c56e3d2561cca682b508f4b8e0a9d5f426e290d0a4076b13d2ab",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "set_up_a_coffee_station_in_your_kitchen",
+    "instance_id": 301,
+    "seed": 20261091,
+    "target_key": "paper_coffee_filter.n.01_1",
+    "target_keys": [
+      "paper_coffee_filter.n.01_1"
+    ],
+    "target_description": "paper coffee filter",
+    "placements": [
+      {
+        "key": "paper_coffee_filter.n.01_1",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近paper coffee filter；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "40b21c641f854923eaa6e8ef62da756ae9de2f4523aec038d47f487f443e3b8a",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "setting_mousetraps",
+    "instance_id": 301,
+    "seed": 20261092,
+    "target_key": "mousetrap.n.01_1",
+    "target_keys": [
+      "mousetrap.n.01_1",
+      "mousetrap.n.01_2",
+      "mousetrap.n.01_3",
+      "mousetrap.n.01_4"
+    ],
+    "target_description": "mousetrap",
+    "placements": [
+      {
+        "key": "mousetrap.n.01_1",
+        "relation": "ontop",
+        "support_key": "cabinet.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "cabinet.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "mousetrap.n.01_2",
+        "relation": "ontop",
+        "support_key": "cabinet.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "cabinet.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "mousetrap.n.01_3",
+        "relation": "ontop",
+        "support_key": "cabinet.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "cabinet.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "mousetrap.n.01_4",
+        "relation": "ontop",
+        "support_key": "cabinet.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "cabinet.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近mousetrap；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "47cbc1e1c1b890509c55b8f02fe6c8e502ffe95ef3c01d6e9cf3b34455518c7b",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "setting_the_fire",
+    "instance_id": 301,
+    "seed": 20261093,
+    "target_key": "cigar_lighter.n.01_1",
+    "target_keys": [
+      "cigar_lighter.n.01_1"
+    ],
+    "target_description": "cigar lighter",
+    "placements": [
+      {
+        "key": "cigar_lighter.n.01_1",
+        "relation": "ontop",
+        "support_key": "table.n.02_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "table.n.02_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近cigar lighter；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "d7d62278c4be89fa1199239267784bbcbc87270a5fb64a6a9705ecfff4525c96",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "setting_the_table",
+    "instance_id": 301,
+    "seed": 20261094,
+    "target_key": "tablefork.n.01_1",
+    "target_keys": [
+      "tablefork.n.01_1",
+      "tablefork.n.01_2"
+    ],
+    "target_description": "tablefork",
+    "placements": [
+      {
+        "key": "tablefork.n.01_1",
+        "relation": "ontop",
+        "support_key": "sink.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "sink.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "tablefork.n.01_2",
+        "relation": "ontop",
+        "support_key": "sink.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "sink.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近tablefork；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "777b6f105039dbb646c7a889ab28f16b55ca527235cb8da461a636c333267a37",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "setup_a_bar_for_a_cocktail_party",
+    "instance_id": 301,
+    "seed": 20261095,
+    "target_key": "corkscrew.n.01_1",
+    "target_keys": [
+      "corkscrew.n.01_1"
+    ],
+    "target_description": "corkscrew",
+    "placements": [
+      {
+        "key": "corkscrew.n.01_1",
+        "relation": "ontop",
+        "support_key": "cabinet.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "cabinet.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近corkscrew；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "2b2bbf20d80a9042b0d2d5e0b7021cf788768fd91e65bb45537ebb5bff55eb25",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "slicing_vegetables",
+    "instance_id": 301,
+    "seed": 20261096,
+    "target_key": "parer.n.02_1",
+    "target_keys": [
+      "parer.n.02_1"
+    ],
+    "target_description": "parer",
+    "placements": [
+      {
+        "key": "parer.n.02_1",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近parer；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "783060c491bc4ec9cd9ad2bb2e58331ccc895fb4b0f0af418f9e2437135b15d0",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "sorting_books_on_shelf",
+    "instance_id": 301,
+    "seed": 20261097,
+    "target_key": "hardback.n.01_1",
+    "target_keys": [
+      "hardback.n.01_1",
+      "hardback.n.01_2"
+    ],
+    "target_description": "hardback",
+    "placements": [
+      {
+        "key": "hardback.n.01_1",
+        "relation": "inside",
+        "support_key": "bookcase.n.01_1",
+        "ancestors": [
+          {
+            "relation": "inside",
+            "object_key": "bookcase.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "hardback.n.01_2",
+        "relation": "ontop",
+        "support_key": "comic_book.n.01_3",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "comic_book.n.01_3"
+          },
+          {
+            "relation": "inside",
+            "object_key": "bookcase.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近hardback；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "faac376065d4d03bbf17addeb22d1afdec65dcbda38c6487c50eb74903bc6361",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "sorting_bottles_cans_and_paper",
+    "instance_id": 301,
+    "seed": 20261098,
+    "target_key": "wine_bottle.n.01_1",
+    "target_keys": [
+      "wine_bottle.n.01_1",
+      "wine_bottle.n.01_2"
+    ],
+    "target_description": "wine bottle",
+    "placements": [
+      {
+        "key": "wine_bottle.n.01_1",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "wine_bottle.n.01_2",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近wine bottle；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "901c0fc08d3f8d721a69758deb455f9b8eaf89c4dee78e95a03bc20bc33fd1ac",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "sorting_household_items",
+    "instance_id": 301,
+    "seed": 20261099,
+    "target_key": "toothbrush.n.01_1",
+    "target_keys": [
+      "toothbrush.n.01_1"
+    ],
+    "target_description": "toothbrush",
+    "placements": [
+      {
+        "key": "toothbrush.n.01_1",
+        "relation": "inside",
+        "support_key": "basket.n.01_2",
+        "ancestors": [
+          {
+            "relation": "inside",
+            "object_key": "basket.n.01_2"
+          },
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近toothbrush；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "d8eb464ba273d8ccf3efa065bcc1adf759998b567b1d8fe880f5b8529600a3a9",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "sorting_vegetables",
+    "instance_id": 301,
+    "seed": 20261100,
+    "target_key": "mixing_bowl.n.01_1",
+    "target_keys": [
+      "mixing_bowl.n.01_1",
+      "mixing_bowl.n.01_2",
+      "mixing_bowl.n.01_3"
+    ],
+    "target_description": "mixing bowl",
+    "placements": [
+      {
+        "key": "mixing_bowl.n.01_1",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "mixing_bowl.n.01_2",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "mixing_bowl.n.01_3",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近mixing bowl；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "f47375bd80491dcbf0f5918916f8501ddc8ac1ef4db86dfa91aff8ab4a7443a8",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "spraying_for_bugs",
+    "instance_id": 301,
+    "seed": 20261101,
+    "target_key": "insectifuge__atomizer.n.01_1",
+    "target_keys": [
+      "insectifuge__atomizer.n.01_1"
+    ],
+    "target_description": "insectifuge atomizer",
+    "placements": [
+      {
+        "key": "insectifuge__atomizer.n.01_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近insectifuge atomizer；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "600921b50306093798c7c69bf052fde7ecca9d86b5477fd853fa11c519107a5f",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "spraying_fruit_trees",
+    "instance_id": 301,
+    "seed": 20261102,
+    "target_key": "pesticide__atomizer.n.01_1",
+    "target_keys": [
+      "pesticide__atomizer.n.01_1"
+    ],
+    "target_description": "pesticide atomizer",
+    "placements": [
+      {
+        "key": "pesticide__atomizer.n.01_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近pesticide atomizer；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "f1b8448c47953c8ca646e0842b27d5058e94de03fa98e741d43350d0824dcd0a",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "stacking_wood",
+    "instance_id": 301,
+    "seed": 20261103,
+    "target_key": "log.n.01_1",
+    "target_keys": [
+      "log.n.01_1",
+      "log.n.01_2",
+      "log.n.01_3",
+      "log.n.01_4",
+      "log.n.01_5",
+      "log.n.01_6"
+    ],
+    "target_description": "log",
+    "placements": [
+      {
+        "key": "log.n.01_1",
+        "relation": "ontop",
+        "support_key": "driveway.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "driveway.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "log.n.01_2",
+        "relation": "ontop",
+        "support_key": "driveway.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "driveway.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "log.n.01_3",
+        "relation": "ontop",
+        "support_key": "driveway.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "driveway.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "log.n.01_4",
+        "relation": "ontop",
+        "support_key": "driveway.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "driveway.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "log.n.01_5",
+        "relation": "ontop",
+        "support_key": "driveway.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "driveway.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "log.n.01_6",
+        "relation": "ontop",
+        "support_key": "driveway.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "driveway.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近log；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "de70b18f9d401fb877f526a32105860349a5673351b45b4ccb10bf51d82cd651",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "store_batteries",
+    "instance_id": 301,
+    "seed": 20261104,
+    "target_key": "battery.n.02_1",
+    "target_keys": [
+      "battery.n.02_1",
+      "battery.n.02_2",
+      "battery.n.02_3"
+    ],
+    "target_description": "battery",
+    "placements": [
+      {
+        "key": "battery.n.02_1",
+        "relation": "ontop",
+        "support_key": "coffee_table.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "coffee_table.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "battery.n.02_2",
+        "relation": "ontop",
+        "support_key": "coffee_table.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "coffee_table.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "battery.n.02_3",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近battery；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "df91a0f880215dff0d0137b409c406c79c6ef67efcf143bfabec19daf14add59",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "store_honey",
+    "instance_id": 301,
+    "seed": 20261105,
+    "target_key": "jar__of__honey.n.01_1",
+    "target_keys": [
+      "jar__of__honey.n.01_1"
+    ],
+    "target_description": "jar of honey",
+    "placements": [
+      {
+        "key": "jar__of__honey.n.01_1",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近jar of honey；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "ee21ac0bcb27d37c33732529d8d79f0fb57bb9ca832218cd5b91efe114197f04",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "store_produce",
+    "instance_id": 301,
+    "seed": 20261106,
+    "target_key": "mango.n.02_1",
+    "target_keys": [
+      "mango.n.02_1",
+      "mango.n.02_2"
+    ],
+    "target_description": "mango",
+    "placements": [
+      {
+        "key": "mango.n.02_1",
+        "relation": "inside",
+        "support_key": "wicker_basket.n.01_1",
+        "ancestors": [
+          {
+            "relation": "inside",
+            "object_key": "wicker_basket.n.01_1"
+          },
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "mango.n.02_2",
+        "relation": "inside",
+        "support_key": "wicker_basket.n.01_1",
+        "ancestors": [
+          {
+            "relation": "inside",
+            "object_key": "wicker_basket.n.01_1"
+          },
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近mango；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "4bf2ebf0fb3458f2607c7de72b38d0fb23e84505d142794d2b5e4bf190f88d20",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "storing_food",
+    "instance_id": 301,
+    "seed": 20261107,
+    "target_key": "box__of__oatmeal.n.01_1",
+    "target_keys": [
+      "box__of__oatmeal.n.01_1",
+      "box__of__oatmeal.n.01_2"
+    ],
+    "target_description": "box of oatmeal",
+    "placements": [
+      {
+        "key": "box__of__oatmeal.n.01_1",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "box__of__oatmeal.n.01_2",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近box of oatmeal；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "501ba590cc5699a4f89f20ed68d6ea7d3baccc7adbacd441999e86ed2b934ef3",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "sweeping_garage",
+    "instance_id": 301,
+    "seed": 20261108,
+    "target_key": "broom.n.01_1",
+    "target_keys": [
+      "broom.n.01_1"
+    ],
+    "target_description": "broom",
+    "placements": [
+      {
+        "key": "broom.n.01_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近broom；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "a4e9af08f357d4f469ab154a5a37803d569f296bcf7b3daccf45186adcce5ce2",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "thawing_frozen_food",
+    "instance_id": 301,
+    "seed": 20261109,
+    "target_key": "chicken_breast.n.02_1",
+    "target_keys": [
+      "chicken_breast.n.02_1"
+    ],
+    "target_description": "chicken breast",
+    "placements": [
+      {
+        "key": "chicken_breast.n.02_1",
+        "relation": "ontop",
+        "support_key": "plate.n.04_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "plate.n.04_1"
+          },
+          {
+            "relation": "inside",
+            "object_key": "electric_refrigerator.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近chicken breast；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "771cfb02f4462f4f29d27fff670735749f5e63bbf2941c70be49496b64eb9521",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "tidying_bathroom",
+    "instance_id": 301,
+    "seed": 20261110,
+    "target_key": "soap_dish.n.01_1",
+    "target_keys": [
+      "soap_dish.n.01_1"
+    ],
+    "target_description": "soap dish",
+    "placements": [
+      {
+        "key": "soap_dish.n.01_1",
+        "relation": "ontop",
+        "support_key": "sink.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "sink.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近soap dish；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "e206c6fbed1117e4a434505af629782cebfdbdd420698c2f6a1eabcf3b7517a9",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "tidying_bedroom",
+    "instance_id": 301,
+    "seed": 20261111,
+    "target_key": "sandal.n.01_1",
+    "target_keys": [
+      "sandal.n.01_1",
+      "sandal.n.01_2"
+    ],
+    "target_description": "sandal",
+    "placements": [
+      {
+        "key": "sandal.n.01_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "sandal.n.01_2",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近sandal；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "ab922d907c1f7ad980ea11e61abfcc41a0d8e663075b12a65db3715602a3db5d",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "tidying_living_room",
+    "instance_id": 301,
+    "seed": 20261112,
+    "target_key": "newspaper.n.03_1",
+    "target_keys": [
+      "newspaper.n.03_1"
+    ],
+    "target_description": "newspaper",
+    "placements": [
+      {
+        "key": "newspaper.n.03_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近newspaper；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "004780045ce7ab23c72558a7845768cfe7425986bf6e351b6addc7cce4a39989",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "turning_out_all_lights_before_sleep",
+    "instance_id": 301,
+    "seed": 20261113,
+    "target_key": "table_lamp.n.01_1",
+    "target_keys": [
+      "table_lamp.n.01_1",
+      "table_lamp.n.01_2"
+    ],
+    "target_description": "table lamp",
+    "placements": [
+      {
+        "key": "table_lamp.n.01_1",
+        "relation": "ontop",
+        "support_key": "coffee_table.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "coffee_table.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "table_lamp.n.01_2",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近table lamp；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "b922c30c2f0bf4705fabcdc44827a81e433912677d913afef54308d755923d02",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "unloading_the_car",
+    "instance_id": 301,
+    "seed": 20261114,
+    "target_key": "briefcase.n.01_1",
+    "target_keys": [
+      "briefcase.n.01_1"
+    ],
+    "target_description": "briefcase",
+    "placements": [
+      {
+        "key": "briefcase.n.01_1",
+        "relation": "inside",
+        "support_key": "car.n.01_1",
+        "ancestors": [
+          {
+            "relation": "inside",
+            "object_key": "car.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近briefcase；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "1e58f03f84c57ee2835c76fcbb1b42f893643306eb5fd09192e0b1e13cd48081",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "vacuuming_floors",
+    "instance_id": 301,
+    "seed": 20261115,
+    "target_key": "vacuum.n.04_1",
+    "target_keys": [
+      "vacuum.n.04_1"
+    ],
+    "target_description": "vacuum",
+    "placements": [
+      {
+        "key": "vacuum.n.04_1",
+        "relation": "ontop",
+        "support_key": "floor.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "floor.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近vacuum；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "39a2a6d367b74df21749d06eaaf1919b29dc4387a98341cce812de35ab23bf43",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "wash_a_baseball_cap",
+    "instance_id": 301,
+    "seed": 20261116,
+    "target_key": "baseball_cap.n.01_1",
+    "target_keys": [
+      "baseball_cap.n.01_1",
+      "baseball_cap.n.01_2"
+    ],
+    "target_description": "baseball cap",
+    "placements": [
+      {
+        "key": "baseball_cap.n.01_1",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "baseball_cap.n.01_2",
+        "relation": "ontop",
+        "support_key": "countertop.n.01_1",
+        "ancestors": [
+          {
+            "relation": "ontop",
+            "object_key": "countertop.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近baseball cap；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "3be2a8557d0554eb2077cfeb2a9f4d8af45cad3521e046bedb9d3592f53208f2",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  },
+  {
+    "task_name": "wash_dog_toys",
+    "instance_id": 301,
+    "seed": 20261117,
+    "target_key": "teddy.n.01_1",
+    "target_keys": [
+      "teddy.n.01_1",
+      "teddy.n.01_2"
+    ],
+    "target_description": "teddy",
+    "placements": [
+      {
+        "key": "teddy.n.01_1",
+        "relation": "inside",
+        "support_key": "cabinet.n.01_1",
+        "ancestors": [
+          {
+            "relation": "inside",
+            "object_key": "cabinet.n.01_1"
+          }
+        ]
+      },
+      {
+        "key": "teddy.n.01_2",
+        "relation": "inside",
+        "support_key": "cabinet.n.01_1",
+        "ancestors": [
+          {
+            "relation": "inside",
+            "object_key": "cabinet.n.01_1"
+          }
+        ]
+      }
+    ],
+    "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+    "ood_axis": "new_object_positions_plus_initial_search_heading",
+    "minimum_relocation_m": 0.08,
+    "placement_attempts": 12,
+    "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+    "goal": "寻找并接近teddy；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+    "acceptance": {
+      "max_horizontal_distance_m": 1.0,
+      "min_target_pixels": 16,
+      "initial_all_targets_invisible": true,
+      "planner_reached_required": true,
+      "original_task_completion_required": false
+    },
+    "status": "designed_not_simulator_validated",
+    "definition_sha256": "0b8d32a0ef37cef4db704d0e1b50d6f77f35414d60a73f0ebf5bfd161133a9b5",
+    "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+    "limitations": [
+      "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+      "One public-test instance and one seed per task; not a robust task success-rate estimate."
+    ]
+  }
+]

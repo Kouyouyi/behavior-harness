@@ -1,0 +1,54 @@
+{
+  "compare.py": {
+    "source": "/home/cody/Documents/Codex/2026-10-09/bang-w/behavior_harness/compare.py",
+    "sha256": "bbe2e5b4697fd397a0e6cffbfde85152dc91cd94ef434cf7f27eab2b1b5be3dd"
+  },
+  "planner.py": {
+    "source": "/home/cody/Documents/Codex/2026-10-09/bang-w/behavior_harness/planner.py",
+    "sha256": "c5beede9c4e8e1e76df058c0771a27e9241e0cbb56ff825ddde536eea27eadb9"
+  },
+  "policy.py": {
+    "source": "/home/cody/Documents/Codex/2026-10-09/bang-w/behavior_harness/policy.py",
+    "sha256": "dadcfc35978977f250cb97b91998fd2a726255589aab85b12716dc53c3fceaaa"
+  },
+  "context_policy_service.py": {
+    "source": "/home/cody/Documents/Codex/2026-10-09/bang-w/behavior_harness/context_policy_service.py",
+    "sha256": "e6350704645ed64ebe0a204c93975aa848bf724d80a187e10ca1db635e09cd49"
+  },
+  "run.py": {
+    "source": "/home/cody/Documents/Codex/2026-10-09/bang-w/behavior_harness/run.py",
+    "sha256": "60ba5e919609749229ac5a01375a01597945c3f8a2238d4ec1ffad9060d4c170"
+  },
+  "contracts.py": {
+    "source": "/home/cody/Documents/Codex/2026-10-09/bang-w/behavior_harness/contracts.py",
+    "sha256": "d75e7933994883a749cbd6254374bbf131e48ad0e494507685a92591f36ff918"
+  },
+  "launch.py": {
+    "source": "/home/cody/Documents/Codex/2026-10-09/bang-w/behavior_harness/launch.py",
+    "sha256": "223bac043387c12fc6477755e2845540b09de10546888145809c16509ec5bc42"
+  },
+  "backend.py": {
+    "source": "/home/cody/Documents/Codex/2026-10-09/bang-w/behavior_harness/backend.py",
+    "sha256": "68f2729594f0fbdd4620524c8cecbb6f924b902ed67ff17e8a0c608ec00134df"
+  },
+  "__init__.py": {
+    "source": "/home/cody/Documents/Codex/2026-10-09/bang-w/behavior_harness/__init__.py",
+    "sha256": "f33e8bcd26ab5837dc9d33c3da2bc75d3d0388b84f92ad53d131d952c10e061d"
+  },
+  "prompts.py": {
+    "source": "/home/cody/Documents/Codex/2026-10-09/bang-w/behavior_harness/prompts.py",
+    "sha256": "d8eaac650a57eaabe906959b95d7ffb02d3467089dd0351ca3e3a85f0b8f3478"
+  },
+  "smoke.py": {
+    "source": "/home/cody/Documents/Codex/2026-10-09/bang-w/behavior_harness/smoke.py",
+    "sha256": "f1c3b7a7a5af666555cea10bb0cb02fbe1ed8fcbb6a63beec05349873333723f"
+  },
+  "service.py": {
+    "source": "/home/cody/Documents/Codex/2026-10-09/bang-w/behavior_harness/service.py",
+    "sha256": "df49cf5a94e1cb642cfd6b7131fb01062ab8221f4283d16a2c40678c4b70dca4"
+  },
+  "client.py": {
+    "source": "/home/cody/Documents/Codex/2026-10-09/bang-w/behavior_harness/client.py",
+    "sha256": "0d8de0c0120ce467d3d3e0ab8c38e8da45daad3927931d9ed17b945fd0ddae1f"
+  }
+}

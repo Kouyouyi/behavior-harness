@@ -1,0 +1,13 @@
+diff --git a/src/openpi/policies/b1k_policy.py b/src/openpi/policies/b1k_policy.py
+index 73c97c8..d6b8c82 100644
+--- a/src/openpi/policies/b1k_policy.py
++++ b/src/openpi/policies/b1k_policy.py
+@@ -5,7 +5,7 @@ import numpy as np
+ 
+ from openpi import transforms
+ from openpi.models import model as _model
+-from omnigibson.learning.utils.eval_utils import PROPRIOCEPTION_INDICES
++from b1k.shared.eval_utils_2025 import PROPRIOCEPTION_INDICES
+ 
+ 
+ def make_b1k_example() -> dict:

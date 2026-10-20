@@ -1,0 +1,127 @@
+{
+  "task_name": "putting_dishes_away_after_cleaning",
+  "instance_id": 301,
+  "seed": 20261084,
+  "target_key": "plate.n.04_1",
+  "target_keys": [
+    "plate.n.04_1",
+    "plate.n.04_2",
+    "plate.n.04_3",
+    "plate.n.04_4",
+    "plate.n.04_5",
+    "plate.n.04_6",
+    "plate.n.04_7",
+    "plate.n.04_8"
+  ],
+  "target_description": "plate",
+  "placements": [
+    {
+      "key": "plate.n.04_1",
+      "relation": "ontop",
+      "support_key": "countertop.n.01_1",
+      "ancestors": [
+        {
+          "relation": "ontop",
+          "object_key": "countertop.n.01_1"
+        }
+      ]
+    },
+    {
+      "key": "plate.n.04_2",
+      "relation": "ontop",
+      "support_key": "countertop.n.01_1",
+      "ancestors": [
+        {
+          "relation": "ontop",
+          "object_key": "countertop.n.01_1"
+        }
+      ]
+    },
+    {
+      "key": "plate.n.04_3",
+      "relation": "ontop",
+      "support_key": "countertop.n.01_1",
+      "ancestors": [
+        {
+          "relation": "ontop",
+          "object_key": "countertop.n.01_1"
+        }
+      ]
+    },
+    {
+      "key": "plate.n.04_4",
+      "relation": "ontop",
+      "support_key": "countertop.n.01_1",
+      "ancestors": [
+        {
+          "relation": "ontop",
+          "object_key": "countertop.n.01_1"
+        }
+      ]
+    },
+    {
+      "key": "plate.n.04_5",
+      "relation": "ontop",
+      "support_key": "countertop.n.01_2",
+      "ancestors": [
+        {
+          "relation": "ontop",
+          "object_key": "countertop.n.01_2"
+        }
+      ]
+    },
+    {
+      "key": "plate.n.04_6",
+      "relation": "ontop",
+      "support_key": "countertop.n.01_2",
+      "ancestors": [
+        {
+          "relation": "ontop",
+          "object_key": "countertop.n.01_2"
+        }
+      ]
+    },
+    {
+      "key": "plate.n.04_7",
+      "relation": "ontop",
+      "support_key": "countertop.n.01_2",
+      "ancestors": [
+        {
+          "relation": "ontop",
+          "object_key": "countertop.n.01_2"
+        }
+      ]
+    },
+    {
+      "key": "plate.n.04_8",
+      "relation": "ontop",
+      "support_key": "countertop.n.01_2",
+      "ancestors": [
+        {
+          "relation": "ontop",
+          "object_key": "countertop.n.01_2"
+        }
+      ]
+    }
+  ],
+  "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+  "ood_axis": "new_object_positions_plus_initial_search_heading",
+  "minimum_relocation_m": 0.08,
+  "placement_attempts": 12,
+  "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+  "goal": "寻找并接近plate；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+  "acceptance": {
+    "max_horizontal_distance_m": 1.0,
+    "min_target_pixels": 16,
+    "initial_all_targets_invisible": true,
+    "planner_reached_required": true,
+    "original_task_completion_required": false
+  },
+  "status": "designed_not_simulator_validated",
+  "definition_sha256": "9f4445356bd7f5da5047166efe639f88d6b23688f065659b3ec0a7a892367646",
+  "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+  "limitations": [
+    "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+    "One public-test instance and one seed per task; not a robust task success-rate estimate."
+  ]
+}

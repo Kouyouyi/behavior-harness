@@ -1,0 +1,43 @@
+{
+  "task_name": "getting_organized_for_work",
+  "instance_id": 301,
+  "seed": 20261056,
+  "target_key": "mouse.n.04_1",
+  "target_keys": [
+    "mouse.n.04_1"
+  ],
+  "target_description": "mouse",
+  "placements": [
+    {
+      "key": "mouse.n.04_1",
+      "relation": "ontop",
+      "support_key": "desk.n.01_1",
+      "ancestors": [
+        {
+          "relation": "ontop",
+          "object_key": "desk.n.01_1"
+        }
+      ]
+    }
+  ],
+  "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+  "ood_axis": "new_object_positions_plus_initial_search_heading",
+  "minimum_relocation_m": 0.08,
+  "placement_attempts": 12,
+  "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+  "goal": "寻找并接近mouse；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+  "acceptance": {
+    "max_horizontal_distance_m": 1.0,
+    "min_target_pixels": 16,
+    "initial_all_targets_invisible": true,
+    "planner_reached_required": true,
+    "original_task_completion_required": false
+  },
+  "status": "designed_not_simulator_validated",
+  "definition_sha256": "b4c6fcb70e1c810484c7b330fb4a2f31997029577c6a28d3fb240d1b58bd2544",
+  "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+  "limitations": [
+    "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+    "One public-test instance and one seed per task; not a robust task success-rate estimate."
+  ]
+}

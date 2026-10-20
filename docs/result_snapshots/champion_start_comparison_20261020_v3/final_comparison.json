@@ -1,0 +1,196 @@
+{
+  "scene": "radio_on_tv_cabinet_facing_room",
+  "seed": 20261020,
+  "yaw": 180,
+  "budget_each": 10000,
+  "scope": "one unfamiliar-position case; fresh initial scene for both; not a population success rate",
+  "groups": [
+    {
+      "condition": "harness",
+      "attempt": 1,
+      "search_run": "harness_v1_search",
+      "search_steps": 480,
+      "search_success": true,
+      "completion_run": "harness_v1_champion_auditrepair",
+      "completion_steps": 5118,
+      "total_steps": 5598,
+      "valid_evaluation": true,
+      "original_task_success": true,
+      "status": "success",
+      "reason": "official_task_success",
+      "champion_boot_id": "aa661a41-5fd9-41c8-83cb-94b9b3b73002",
+      "previous_audit_records": [
+        {
+          "condition": "harness",
+          "attempt": 1,
+          "search_success": true,
+          "original_task_success": false,
+          "valid_evaluation": false,
+          "search_run": "harness_v1_search",
+          "search_steps": 480,
+          "status": "infrastructure_failed",
+          "reason": "find_and_approach_success",
+          "superseded_audit_classification": "infrastructure_failed",
+          "note": "Zero-action reached round was incorrectly required to have an action-prefix check; original evidence retained."
+        },
+        {
+          "condition": "harness",
+          "attempt": 2,
+          "search_success": true,
+          "original_task_success": false,
+          "valid_evaluation": false,
+          "search_run": "harness_v2_search",
+          "search_steps": 496,
+          "status": "infrastructure_failed",
+          "reason": "find_and_approach_success",
+          "superseded_audit_classification": "infrastructure_failed",
+          "note": "Zero-action reached round was incorrectly required to have an action-prefix check; original evidence retained."
+        }
+      ],
+      "videos": {
+        "third_person": {
+          "path": "/media/cody/软件/behavior_harness/outputs/champion_start_comparison_20261020_v3/full_process_videos/harness_third_person.mp4",
+          "segments": [
+            "/media/cody/软件/behavior_harness/outputs/champion_start_comparison_20261020_v3/harness_v1_search/sim/videos/third_person.mp4",
+            "/media/cody/软件/behavior_harness/outputs/champion_start_comparison_20261020_v3/harness_v1_champion_auditrepair/sim/videos/third_person.mp4"
+          ],
+          "segment_validation": [
+            {
+              "frames": 480,
+              "width": 1280,
+              "height": 720,
+              "fps": "30/1",
+              "duration": "16.000000",
+              "fully_decoded": true
+            },
+            {
+              "frames": 5118,
+              "width": 1280,
+              "height": 720,
+              "fps": "30/1",
+              "duration": "170.600000",
+              "fully_decoded": true
+            }
+          ],
+          "full_validation": {
+            "frames": 5598,
+            "width": 1280,
+            "height": 720,
+            "fps": "30/1",
+            "duration": "186.600000",
+            "fully_decoded": true
+          },
+          "note": "A: search then champion, with clean-state process handoff between segments. Simulation steps exclude setup frames."
+        },
+        "robot_cameras": {
+          "path": "/media/cody/软件/behavior_harness/outputs/champion_start_comparison_20261020_v3/full_process_videos/harness_robot_cameras.mp4",
+          "segments": [
+            "/media/cody/软件/behavior_harness/outputs/champion_start_comparison_20261020_v3/harness_v1_search/sim/videos/robot_cameras.mp4",
+            "/media/cody/软件/behavior_harness/outputs/champion_start_comparison_20261020_v3/harness_v1_champion_auditrepair/sim/videos/robot_cameras.mp4"
+          ],
+          "segment_validation": [
+            {
+              "frames": 480,
+              "width": 672,
+              "height": 448,
+              "fps": "30/1",
+              "duration": "16.000000",
+              "fully_decoded": true
+            },
+            {
+              "frames": 5118,
+              "width": 672,
+              "height": 448,
+              "fps": "30/1",
+              "duration": "170.600000",
+              "fully_decoded": true
+            }
+          ],
+          "full_validation": {
+            "frames": 5598,
+            "width": 672,
+            "height": 448,
+            "fps": "30/1",
+            "duration": "186.600000",
+            "fully_decoded": true
+          },
+          "note": "A: search then champion, with clean-state process handoff between segments. Simulation steps exclude setup frames."
+        }
+      },
+      "vla_calls": {
+        "harness_v1_search": 60,
+        "harness_v1_champion_auditrepair": 256
+      },
+      "planner_calls": 20
+    },
+    {
+      "condition": "direct",
+      "attempt": 1,
+      "search_success": null,
+      "original_task_success": false,
+      "valid_evaluation": true,
+      "champion_boot_id": "9ff124b7-1e34-40ad-b919-ea0a1d6e58fe",
+      "completion_run": "direct_v1_champion",
+      "completion_steps": 10000,
+      "total_steps": 10000,
+      "status": "task_not_successful",
+      "reason": "environment_timeout",
+      "videos": {
+        "third_person": {
+          "path": "/media/cody/软件/behavior_harness/outputs/champion_start_comparison_20261020_v3/full_process_videos/direct_third_person.mp4",
+          "segments": [
+            "/media/cody/软件/behavior_harness/outputs/champion_start_comparison_20261020_v3/direct_v1_champion/sim/videos/third_person.mp4"
+          ],
+          "segment_validation": [
+            {
+              "frames": 10000,
+              "width": 1280,
+              "height": 720,
+              "fps": "30/1",
+              "duration": "333.333333",
+              "fully_decoded": true
+            }
+          ],
+          "full_validation": {
+            "frames": 10000,
+            "width": 1280,
+            "height": 720,
+            "fps": "30/1",
+            "duration": "333.333333",
+            "fully_decoded": true
+          },
+          "note": "Champion directly controls from the fresh initial scene; no search-stage handoff."
+        },
+        "robot_cameras": {
+          "path": "/media/cody/软件/behavior_harness/outputs/champion_start_comparison_20261020_v3/full_process_videos/direct_robot_cameras.mp4",
+          "segments": [
+            "/media/cody/软件/behavior_harness/outputs/champion_start_comparison_20261020_v3/direct_v1_champion/sim/videos/robot_cameras.mp4"
+          ],
+          "segment_validation": [
+            {
+              "frames": 10000,
+              "width": 672,
+              "height": 448,
+              "fps": "30/1",
+              "duration": "333.333333",
+              "fully_decoded": true
+            }
+          ],
+          "full_validation": {
+            "frames": 10000,
+            "width": 672,
+            "height": 448,
+            "fps": "30/1",
+            "duration": "333.333333",
+            "fully_decoded": true
+          },
+          "note": "Champion directly controls from the fresh initial scene; no search-stage handoff."
+        }
+      },
+      "vla_calls": {
+        "direct_v1_champion": 500
+      },
+      "planner_calls": 0
+    }
+  ]
+}

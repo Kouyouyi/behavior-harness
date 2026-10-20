@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+outputs/
+deps/
+.venv/
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.mp4
+*.tar.gz
+*.bundle

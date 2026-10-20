@@ -1,0 +1,10 @@
+{
+  "active": "assembling_gift_baskets direct_v1 champion execution",
+  "screening": {
+    "eligible": 39,
+    "excluded_container_demonstration_unverified": 18,
+    "unsupported_champion_task": 42
+  },
+  "planned_pairs": 39,
+  "results": []
+}

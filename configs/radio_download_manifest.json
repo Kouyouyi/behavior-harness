@@ -1,0 +1,138 @@
+{
+  "source": "https://drive.usercontent.google.com/download?id=1KojwNUz0HVwU3Ww2SVh3NKt-4asuI3y2&export=download&confirm=t",
+  "archive_size": 17300367601,
+  "downloaded_prefix_size": 12444406476,
+  "files": [
+    {
+      "path": "pi05_turn_on_the_radio/",
+      "size": 0,
+      "crc32": 0
+    },
+    {
+      "path": "pi05_turn_on_the_radio/params/",
+      "size": 0,
+      "crc32": 0
+    },
+    {
+      "path": "pi05_turn_on_the_radio/params/array_metadatas/",
+      "size": 0,
+      "crc32": 0
+    },
+    {
+      "path": "pi05_turn_on_the_radio/params/array_metadatas/process_0",
+      "size": 9076,
+      "crc32": 3649341631
+    },
+    {
+      "path": "pi05_turn_on_the_radio/params/d/",
+      "size": 0,
+      "crc32": 0
+    },
+    {
+      "path": "pi05_turn_on_the_radio/params/d/06240d97141fd59f286568164369c003",
+      "size": 13507,
+      "crc32": 2302261521
+    },
+    {
+      "path": "pi05_turn_on_the_radio/params/ocdbt.process_0/",
+      "size": 0,
+      "crc32": 0
+    },
+    {
+      "path": "pi05_turn_on_the_radio/params/ocdbt.process_0/d/",
+      "size": 0,
+      "crc32": 0
+    },
+    {
+      "path": "pi05_turn_on_the_radio/params/ocdbt.process_0/d/140075953a8c6ca43e067c302fd07990",
+      "size": 13489,
+      "crc32": 2287706255
+    },
+    {
+      "path": "pi05_turn_on_the_radio/params/ocdbt.process_0/d/2ce6606228472a958617147285091890",
+      "size": 2193769684,
+      "crc32": 3666746312
+    },
+    {
+      "path": "pi05_turn_on_the_radio/params/ocdbt.process_0/d/36c5bb59d4c9e8cba57fda5eb264c11a",
+      "size": 2239896154,
+      "crc32": 1874094907
+    },
+    {
+      "path": "pi05_turn_on_the_radio/params/ocdbt.process_0/d/44a49450574627239ed50dd7e91f3374",
+      "size": 5656,
+      "crc32": 1481486679
+    },
+    {
+      "path": "pi05_turn_on_the_radio/params/ocdbt.process_0/d/550e25afb9a4f961716b12140c06f7a1",
+      "size": 2239900852,
+      "crc32": 1202923209
+    },
+    {
+      "path": "pi05_turn_on_the_radio/params/ocdbt.process_0/d/567afaae768af63de78bbe69741191d8",
+      "size": 217,
+      "crc32": 491743588
+    },
+    {
+      "path": "pi05_turn_on_the_radio/params/ocdbt.process_0/d/725a52d2566f34c54394e4b255d539c5",
+      "size": 2169716254,
+      "crc32": 3742768895
+    },
+    {
+      "path": "pi05_turn_on_the_radio/params/ocdbt.process_0/d/aa8d5a26de5b078131e9b51952181a6d",
+      "size": 2680189142,
+      "crc32": 3979646744
+    },
+    {
+      "path": "pi05_turn_on_the_radio/params/ocdbt.process_0/d/bb9925049cf17cdffad1d5da578a8b20",
+      "size": 907872545,
+      "crc32": 1381259841
+    },
+    {
+      "path": "pi05_turn_on_the_radio/params/ocdbt.process_0/d/e561c1e4103cbb2ce8c58c291f362cc3",
+      "size": 1092,
+      "crc32": 3131116914
+    },
+    {
+      "path": "pi05_turn_on_the_radio/params/ocdbt.process_0/d/fccb4d883a72ae118e2e31bb9700adf1",
+      "size": 9228429,
+      "crc32": 3461618092
+    },
+    {
+      "path": "pi05_turn_on_the_radio/params/ocdbt.process_0/manifest.ocdbt",
+      "size": 400,
+      "crc32": 1928096316
+    },
+    {
+      "path": "pi05_turn_on_the_radio/params/_METADATA",
+      "size": 23500,
+      "crc32": 3420307708
+    },
+    {
+      "path": "pi05_turn_on_the_radio/params/_sharding",
+      "size": 15092,
+      "crc32": 3467478912
+    },
+    {
+      "path": "pi05_turn_on_the_radio/params/manifest.ocdbt",
+      "size": 118,
+      "crc32": 3948504748
+    },
+    {
+      "path": "pi05_turn_on_the_radio/assets/",
+      "size": 0,
+      "crc32": 0
+    },
+    {
+      "path": "pi05_turn_on_the_radio/assets/turning_on_radio/",
+      "size": 0,
+      "crc32": 0
+    },
+    {
+      "path": "pi05_turn_on_the_radio/assets/turning_on_radio/norm_stats.json",
+      "size": 5573,
+      "crc32": 2837257601
+    }
+  ],
+  "verification": "all selected ZIP members extracted with CRC verification"
+}

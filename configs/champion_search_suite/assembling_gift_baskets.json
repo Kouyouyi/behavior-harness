@@ -1,0 +1,83 @@
+{
+  "task_name": "assembling_gift_baskets",
+  "instance_id": 301,
+  "seed": 20271019,
+  "target_key": "wicker_basket.n.01_1",
+  "target_keys": [
+    "wicker_basket.n.01_1",
+    "wicker_basket.n.01_2",
+    "wicker_basket.n.01_3",
+    "wicker_basket.n.01_4"
+  ],
+  "target_description": "wicker basket",
+  "placements": [
+    {
+      "key": "wicker_basket.n.01_1",
+      "relation": "ontop",
+      "support_key": "floor.n.01_1",
+      "ancestors": [
+        {
+          "relation": "ontop",
+          "object_key": "floor.n.01_1"
+        }
+      ]
+    },
+    {
+      "key": "wicker_basket.n.01_2",
+      "relation": "ontop",
+      "support_key": "floor.n.01_1",
+      "ancestors": [
+        {
+          "relation": "ontop",
+          "object_key": "floor.n.01_1"
+        }
+      ]
+    },
+    {
+      "key": "wicker_basket.n.01_3",
+      "relation": "ontop",
+      "support_key": "floor.n.01_1",
+      "ancestors": [
+        {
+          "relation": "ontop",
+          "object_key": "floor.n.01_1"
+        }
+      ]
+    },
+    {
+      "key": "wicker_basket.n.01_4",
+      "relation": "ontop",
+      "support_key": "floor.n.01_1",
+      "ancestors": [
+        {
+          "relation": "ontop",
+          "object_key": "floor.n.01_1"
+        }
+      ]
+    }
+  ],
+  "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+  "ood_axis": "new_object_positions_plus_initial_search_heading",
+  "minimum_relocation_m": 0.08,
+  "placement_attempts": 24,
+  "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+  "goal": "寻找并接近wicker basket；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+  "acceptance": {
+    "max_horizontal_distance_m": 1.0,
+    "min_target_pixels": 16,
+    "initial_all_targets_invisible": true,
+    "planner_reached_required": true,
+    "original_task_completion_required": false
+  },
+  "status": "designed_not_simulator_validated",
+  "definition_sha256": "6e6c82bae96d3b4efaf3026ed84c2e0ea1aefa57e2f4763c51d2c2fe7b96267e",
+  "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+  "limitations": [
+    "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+    "One public-test instance and one seed per task; not a robust task success-rate estimate."
+  ],
+  "floor_target_cluster_half_angle_deg": 35,
+  "minimum_initial_distance_m": 1.25,
+  "design_revision": 2,
+  "revision_reason": "First candidate was initially visible; constrain floor placements to a distant angular sector without changing support relations. No policy actions occurred in rejected candidate."
+}

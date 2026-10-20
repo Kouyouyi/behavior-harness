@@ -1,0 +1,262 @@
+{
+  "planned": 10,
+  "valid_trials": 10,
+  "original_task_successes": 0,
+  "search_successes": 5,
+  "not_evaluated": 0,
+  "video_count": 30,
+  "all_videos_fully_decoded": true,
+  "all_action_receipts_valid": true,
+  "trials": [
+    {
+      "trial": "trial_01",
+      "condition": "radio_on_tv_cabinet_facing_room",
+      "attempt": "repair_v3",
+      "search_success": true,
+      "original_task_success": false,
+      "status": "task_not_successful",
+      "reason": "environment_timeout",
+      "stages": [
+        {
+          "stage": "search",
+          "steps": 464,
+          "acceptance": "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_01/search_repair_v3/acceptance.json",
+          "videos": [
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_01/search_repair_v3/sim/videos/robot_cameras.mp4",
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_01/search_repair_v3/sim/videos/third_person.mp4"
+          ]
+        },
+        {
+          "stage": "completion",
+          "steps": 10000,
+          "acceptance": "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_01/completion_repair_v3/acceptance.json",
+          "videos": [
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_01/completion_repair_v3/sim/videos/robot_cameras.mp4",
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_01/completion_repair_v3/sim/videos/third_person.mp4"
+          ]
+        }
+      ]
+    },
+    {
+      "trial": "trial_02",
+      "condition": "radio_on_tv_cabinet_facing_room",
+      "attempt": "repair_v2",
+      "search_success": true,
+      "original_task_success": false,
+      "status": "task_not_successful",
+      "reason": "environment_timeout",
+      "stages": [
+        {
+          "stage": "search",
+          "steps": 464,
+          "acceptance": "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_02/search_repair_v2/acceptance.json",
+          "videos": [
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_02/search_repair_v2/sim/videos/robot_cameras.mp4",
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_02/search_repair_v2/sim/videos/third_person.mp4"
+          ]
+        },
+        {
+          "stage": "completion",
+          "steps": 10000,
+          "acceptance": "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_02/completion_repair_v2/acceptance.json",
+          "videos": [
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_02/completion_repair_v2/sim/videos/robot_cameras.mp4",
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_02/completion_repair_v2/sim/videos/third_person.mp4"
+          ]
+        }
+      ]
+    },
+    {
+      "trial": "trial_03",
+      "condition": "radio_on_tv_cabinet_facing_room",
+      "attempt": null,
+      "search_success": true,
+      "original_task_success": false,
+      "status": "task_not_successful",
+      "reason": "environment_timeout",
+      "stages": [
+        {
+          "stage": "search",
+          "steps": 448,
+          "acceptance": "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_03/search_v1/acceptance.json",
+          "videos": [
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_03/search_v1/sim/videos/robot_cameras.mp4",
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_03/search_v1/sim/videos/third_person.mp4"
+          ]
+        },
+        {
+          "stage": "completion",
+          "steps": 10000,
+          "acceptance": "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_03/completion_v1/acceptance.json",
+          "videos": [
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_03/completion_v1/sim/videos/robot_cameras.mp4",
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_03/completion_v1/sim/videos/third_person.mp4"
+          ]
+        }
+      ]
+    },
+    {
+      "trial": "trial_04",
+      "condition": "radio_on_tv_cabinet_facing_room",
+      "attempt": null,
+      "search_success": true,
+      "original_task_success": false,
+      "status": "task_not_successful",
+      "reason": "environment_timeout",
+      "stages": [
+        {
+          "stage": "search",
+          "steps": 464,
+          "acceptance": "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_04/search_v1/acceptance.json",
+          "videos": [
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_04/search_v1/sim/videos/robot_cameras.mp4",
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_04/search_v1/sim/videos/third_person.mp4"
+          ]
+        },
+        {
+          "stage": "completion",
+          "steps": 10000,
+          "acceptance": "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_04/completion_v1/acceptance.json",
+          "videos": [
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_04/completion_v1/sim/videos/robot_cameras.mp4",
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_04/completion_v1/sim/videos/third_person.mp4"
+          ]
+        }
+      ]
+    },
+    {
+      "trial": "trial_05",
+      "condition": "radio_on_tv_cabinet_facing_room",
+      "attempt": null,
+      "search_success": true,
+      "original_task_success": false,
+      "status": "task_not_successful",
+      "reason": "environment_timeout",
+      "stages": [
+        {
+          "stage": "search",
+          "steps": 432,
+          "acceptance": "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_05/search_v1/acceptance.json",
+          "videos": [
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_05/search_v1/sim/videos/robot_cameras.mp4",
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_05/search_v1/sim/videos/third_person.mp4"
+          ]
+        },
+        {
+          "stage": "completion",
+          "steps": 10000,
+          "acceptance": "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_05/completion_v1/acceptance.json",
+          "videos": [
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_05/completion_v1/sim/videos/robot_cameras.mp4",
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_05/completion_v1/sim/videos/third_person.mp4"
+          ]
+        }
+      ]
+    },
+    {
+      "trial": "trial_06",
+      "condition": "radio_inside_closed_container",
+      "attempt": null,
+      "search_success": false,
+      "original_task_success": false,
+      "status": "search_not_successful",
+      "reason": "environment_timeout",
+      "stages": [
+        {
+          "stage": "search",
+          "steps": 800,
+          "acceptance": "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_06/search_v1/acceptance.json",
+          "videos": [
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_06/search_v1/sim/videos/robot_cameras.mp4",
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_06/search_v1/sim/videos/third_person.mp4"
+          ]
+        }
+      ]
+    },
+    {
+      "trial": "trial_07",
+      "condition": "radio_inside_closed_container",
+      "attempt": null,
+      "search_success": false,
+      "original_task_success": false,
+      "status": "search_not_successful",
+      "reason": "environment_timeout",
+      "stages": [
+        {
+          "stage": "search",
+          "steps": 800,
+          "acceptance": "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_07/search_v1/acceptance.json",
+          "videos": [
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_07/search_v1/sim/videos/robot_cameras.mp4",
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_07/search_v1/sim/videos/third_person.mp4"
+          ]
+        }
+      ]
+    },
+    {
+      "trial": "trial_08",
+      "condition": "radio_inside_closed_container",
+      "attempt": null,
+      "search_success": false,
+      "original_task_success": false,
+      "status": "search_not_successful",
+      "reason": "environment_timeout",
+      "stages": [
+        {
+          "stage": "search",
+          "steps": 800,
+          "acceptance": "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_08/search_v1/acceptance.json",
+          "videos": [
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_08/search_v1/sim/videos/robot_cameras.mp4",
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_08/search_v1/sim/videos/third_person.mp4"
+          ]
+        }
+      ]
+    },
+    {
+      "trial": "trial_09",
+      "condition": "radio_inside_closed_container",
+      "attempt": null,
+      "search_success": false,
+      "original_task_success": false,
+      "status": "search_not_successful",
+      "reason": "environment_timeout",
+      "stages": [
+        {
+          "stage": "search",
+          "steps": 800,
+          "acceptance": "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_09/search_v1/acceptance.json",
+          "videos": [
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_09/search_v1/sim/videos/robot_cameras.mp4",
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_09/search_v1/sim/videos/third_person.mp4"
+          ]
+        }
+      ]
+    },
+    {
+      "trial": "trial_10",
+      "condition": "radio_inside_closed_container",
+      "attempt": null,
+      "search_success": false,
+      "original_task_success": false,
+      "status": "search_not_successful",
+      "reason": "environment_timeout",
+      "stages": [
+        {
+          "stage": "search",
+          "steps": 800,
+          "acceptance": "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_10/search_v1/acceptance.json",
+          "videos": [
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_10/search_v1/sim/videos/robot_cameras.mp4",
+            "/media/cody/软件/behavior_harness/outputs/radio10_20261019/trial_10/search_v1/sim/videos/third_person.mp4"
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "One public-test instance, fixed five seeds per condition; not population success rate.",
+    "Failure reason is observed budget exhaustion; behavioral root cause not yet established."
+  ],
+  "old_infrastructure_attempts_retained": true
+}

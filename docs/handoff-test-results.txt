@@ -1,0 +1,6 @@
+Missing simulator terminal record
+{"type":"RuntimeError"}
+----------------------------------------------------------------------
+Ran 39 tests in 22.032s
+
+OK

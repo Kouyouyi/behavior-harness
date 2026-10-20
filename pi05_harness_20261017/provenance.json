@@ -1,0 +1,12 @@
+{
+  "source_root": "/cs/kyy/behavior_ap_experiment",
+  "checkpoint": "/cs/kyy/behavior_ap_experiment/runs/pi05_goal_horizon_v2_b8/checkpoint_010000",
+  "weights_included": false,
+  "full_dataset_included": false,
+  "portable_changes": [
+    "Pi05Executor tokenizer_path defaults to bundle tokenizer directory",
+    "planner_contract capability list resolved inside bundle and uses current training distribution"
+  ],
+  "omitted": "dangling documentation symlinks, pycache",
+  "training_code_modified": false
+}

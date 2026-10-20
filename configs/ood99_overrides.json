@@ -1,0 +1,10 @@
+{
+  "assembling_gift_baskets": {
+    "floor_target_cluster_half_angle_deg": 35,
+    "minimum_initial_distance_m": 1.25,
+    "seed": 20271019,
+    "placement_attempts": 24,
+    "design_revision": 2,
+    "revision_reason": "First candidate was initially visible; constrain floor placements to a distant angular sector without changing support relations. No policy actions occurred in rejected candidate."
+  }
+}

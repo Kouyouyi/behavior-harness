@@ -1,0 +1,55 @@
+{
+  "task_name": "cook_hot_dogs",
+  "instance_id": 301,
+  "seed": 20261051,
+  "target_key": "hotdog.n.02_1",
+  "target_keys": [
+    "hotdog.n.02_1",
+    "hotdog.n.02_2"
+  ],
+  "target_description": "hotdog",
+  "placements": [
+    {
+      "key": "hotdog.n.02_1",
+      "relation": "inside",
+      "support_key": "electric_refrigerator.n.01_1",
+      "ancestors": [
+        {
+          "relation": "inside",
+          "object_key": "electric_refrigerator.n.01_1"
+        }
+      ]
+    },
+    {
+      "key": "hotdog.n.02_2",
+      "relation": "inside",
+      "support_key": "electric_refrigerator.n.01_1",
+      "ancestors": [
+        {
+          "relation": "inside",
+          "object_key": "electric_refrigerator.n.01_1"
+        }
+      ]
+    }
+  ],
+  "condition": "relocate_on_original_support_and_close_ancestor_if_available",
+  "ood_axis": "new_object_positions_plus_initial_search_heading",
+  "minimum_relocation_m": 0.08,
+  "placement_attempts": 12,
+  "heading": "maximize_angular_separation_from_all_targets_after_evaluator_reset",
+  "goal": "寻找并接近hotdog；有多个同类物体时找到其中任意一个即可。必要时搜索可见通路并检查封闭容器。",
+  "acceptance": {
+    "max_horizontal_distance_m": 1.0,
+    "min_target_pixels": 16,
+    "initial_all_targets_invisible": true,
+    "planner_reached_required": true,
+    "original_task_completion_required": false
+  },
+  "status": "designed_not_simulator_validated",
+  "definition_sha256": "ecfdbe8e432fea1a7fd263e9d249ac219b7a9addaecfee8a6ac01f3c87b1af50",
+  "semantic_policy": "Preserve original support/containment and object attributes. No arbitrary container insertion. Same-class targets are all perturbed and any one may satisfy the goal.",
+  "limitations": [
+    "Scene perturbation OOD only; not proof of statistical separation from all training layouts.",
+    "One public-test instance and one seed per task; not a robust task success-rate estimate."
+  ]
+}

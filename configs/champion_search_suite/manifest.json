@@ -1,0 +1,849 @@
+{
+  "counts": {
+    "eligible": 39,
+    "excluded_container_demonstration_unverified": 18,
+    "unsupported_champion_task": 42
+  },
+  "tasks": [
+    {
+      "task": "assembling_gift_baskets",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/assembling_gift_baskets.json",
+      "task_id": 26,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_2",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/assembling_gift_baskets.json"
+    },
+    {
+      "task": "attach_a_camera_to_a_tripod",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/attach_a_camera_to_a_tripod.json",
+      "task_id": 35,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_3",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/attach_a_camera_to_a_tripod.json"
+    },
+    {
+      "task": "boxing_books_up_for_storage",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/boxing_books_up_for_storage.json",
+      "task_id": 23,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_1",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/boxing_books_up_for_storage.json"
+    },
+    {
+      "task": "boxing_food_after_dinner",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/boxing_food_after_dinner.json",
+      "task_id": null,
+      "container_ancestry": true,
+      "status": "excluded_container_demonstration_unverified",
+      "reason": "No verified matching container opening demonstration; conservatively excluded, not proof of absent data."
+    },
+    {
+      "task": "bringing_in_wood",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/bringing_in_wood.json",
+      "task_id": 15,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_1",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/bringing_in_wood.json"
+    },
+    {
+      "task": "bringing_paper_to_recycling",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/bringing_paper_to_recycling.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "bringing_water",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/bringing_water.json",
+      "task_id": 17,
+      "container_ancestry": true,
+      "status": "excluded_container_demonstration_unverified",
+      "reason": "No verified matching container opening demonstration; conservatively excluded, not proof of absent data."
+    },
+    {
+      "task": "can_meat",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/can_meat.json",
+      "task_id": 4,
+      "container_ancestry": true,
+      "status": "excluded_container_demonstration_unverified",
+      "reason": "No verified matching container opening demonstration; conservatively excluded, not proof of absent data."
+    },
+    {
+      "task": "canning_food",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/canning_food.json",
+      "task_id": 48,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_1",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/canning_food.json"
+    },
+    {
+      "task": "carrying_in_groceries",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/carrying_in_groceries.json",
+      "task_id": 14,
+      "container_ancestry": true,
+      "status": "excluded_container_demonstration_unverified",
+      "reason": "No verified matching container opening demonstration; conservatively excluded, not proof of absent data."
+    },
+    {
+      "task": "carrying_out_garden_furniture",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/carrying_out_garden_furniture.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "chop_an_onion",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/chop_an_onion.json",
+      "task_id": 42,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_1",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/chop_an_onion.json"
+    },
+    {
+      "task": "chopping_wood",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/chopping_wood.json",
+      "task_id": 44,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_1",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/chopping_wood.json"
+    },
+    {
+      "task": "clean_a_keyboard",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/clean_a_keyboard.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "clean_a_patio",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/clean_a_patio.json",
+      "task_id": 36,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_3",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/clean_a_patio.json"
+    },
+    {
+      "task": "clean_a_trumpet",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/clean_a_trumpet.json",
+      "task_id": 37,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_3",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/clean_a_trumpet.json"
+    },
+    {
+      "task": "clean_boxing_gloves",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/clean_boxing_gloves.json",
+      "task_id": 31,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_3",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/clean_boxing_gloves.json"
+    },
+    {
+      "task": "clean_up_broken_glass",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/clean_up_broken_glass.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "clean_up_your_desk",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/clean_up_your_desk.json",
+      "task_id": 29,
+      "container_ancestry": true,
+      "status": "excluded_container_demonstration_unverified",
+      "reason": "No verified matching container opening demonstration; conservatively excluded, not proof of absent data."
+    },
+    {
+      "task": "clean_your_rusty_garden_tools",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/clean_your_rusty_garden_tools.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "cleaning_up_branches_and_twigs",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/cleaning_up_branches_and_twigs.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "cleaning_up_plates_and_food",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/cleaning_up_plates_and_food.json",
+      "task_id": 3,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_1",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/cleaning_up_plates_and_food.json"
+    },
+    {
+      "task": "clearing_food_from_table_into_fridge",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/clearing_food_from_table_into_fridge.json",
+      "task_id": 25,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_1",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/clearing_food_from_table_into_fridge.json"
+    },
+    {
+      "task": "collecting_aluminum_cans",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/collecting_aluminum_cans.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "collecting_childrens_toys",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/collecting_childrens_toys.json",
+      "task_id": 21,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_2",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/collecting_childrens_toys.json"
+    },
+    {
+      "task": "composting_waste",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/composting_waste.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "cook_a_brisket",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/cook_a_brisket.json",
+      "task_id": null,
+      "container_ancestry": true,
+      "status": "excluded_container_demonstration_unverified",
+      "reason": "No verified matching container opening demonstration; conservatively excluded, not proof of absent data."
+    },
+    {
+      "task": "cook_a_frozen_pie",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/cook_a_frozen_pie.json",
+      "task_id": null,
+      "container_ancestry": true,
+      "status": "excluded_container_demonstration_unverified",
+      "reason": "No verified matching container opening demonstration; conservatively excluded, not proof of absent data."
+    },
+    {
+      "task": "cook_bacon",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/cook_bacon.json",
+      "task_id": 46,
+      "container_ancestry": true,
+      "status": "excluded_container_demonstration_unverified",
+      "reason": "No verified matching container opening demonstration; conservatively excluded, not proof of absent data."
+    },
+    {
+      "task": "cook_broccolini",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/cook_broccolini.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "cook_brussels_sprouts",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/cook_brussels_sprouts.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "cook_cabbage",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/cook_cabbage.json",
+      "task_id": 41,
+      "container_ancestry": true,
+      "status": "excluded_container_demonstration_unverified",
+      "reason": "No verified matching container opening demonstration; conservatively excluded, not proof of absent data."
+    },
+    {
+      "task": "cook_hot_dogs",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/cook_hot_dogs.json",
+      "task_id": 45,
+      "container_ancestry": true,
+      "status": "excluded_container_demonstration_unverified",
+      "reason": "No verified matching container opening demonstration; conservatively excluded, not proof of absent data."
+    },
+    {
+      "task": "dispose_of_batteries",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/dispose_of_batteries.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "dispose_of_glass",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/dispose_of_glass.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "freeze_fruit",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/freeze_fruit.json",
+      "task_id": null,
+      "container_ancestry": true,
+      "status": "excluded_container_demonstration_unverified",
+      "reason": "No verified matching container opening demonstration; conservatively excluded, not proof of absent data."
+    },
+    {
+      "task": "freeze_pies",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/freeze_pies.json",
+      "task_id": 47,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_1",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/freeze_pies.json"
+    },
+    {
+      "task": "getting_organized_for_work",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/getting_organized_for_work.json",
+      "task_id": 28,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_1",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/getting_organized_for_work.json"
+    },
+    {
+      "task": "halve_an_egg",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/halve_an_egg.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "hanging_pictures",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/hanging_pictures.json",
+      "task_id": 34,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_1",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/hanging_pictures.json"
+    },
+    {
+      "task": "hiding_Easter_eggs",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/hiding_Easter_eggs.json",
+      "task_id": 6,
+      "container_ancestry": true,
+      "status": "excluded_container_demonstration_unverified",
+      "reason": "No verified matching container opening demonstration; conservatively excluded, not proof of absent data."
+    },
+    {
+      "task": "installing_a_fax_machine",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/installing_a_fax_machine.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "installing_a_modem",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/installing_a_modem.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "installing_a_scanner",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/installing_a_scanner.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "installing_smoke_detectors",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/installing_smoke_detectors.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "laying_tile_floors",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/laying_tile_floors.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "loading_the_car",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/loading_the_car.json",
+      "task_id": 13,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_1",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/loading_the_car.json"
+    },
+    {
+      "task": "make_cabinet_doors",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/make_cabinet_doors.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "make_gift_bags_for_baby_showers",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/make_gift_bags_for_baby_showers.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "make_microwave_popcorn",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/make_microwave_popcorn.json",
+      "task_id": 40,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_4",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/make_microwave_popcorn.json"
+    },
+    {
+      "task": "make_pizza",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/make_pizza.json",
+      "task_id": 49,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_3",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/make_pizza.json"
+    },
+    {
+      "task": "make_rose_centerpieces",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/make_rose_centerpieces.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "moving_boxes_to_storage",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/moving_boxes_to_storage.json",
+      "task_id": 16,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_2",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/moving_boxes_to_storage.json"
+    },
+    {
+      "task": "organizing_art_supplies",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/organizing_art_supplies.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "organizing_school_stuff",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/organizing_school_stuff.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "outfit_a_basic_toolbox",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/outfit_a_basic_toolbox.json",
+      "task_id": 19,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_1",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/outfit_a_basic_toolbox.json"
+    },
+    {
+      "task": "packing_meal_for_delivery",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/packing_meal_for_delivery.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "picking_up_toys",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/picking_up_toys.json",
+      "task_id": 7,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_2",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/picking_up_toys.json"
+    },
+    {
+      "task": "picking_up_trash",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/picking_up_trash.json",
+      "task_id": 1,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_2",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/picking_up_trash.json"
+    },
+    {
+      "task": "polishing_shoes",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/polishing_shoes.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "preparing_lunch_box",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/preparing_lunch_box.json",
+      "task_id": 12,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_2",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/preparing_lunch_box.json"
+    },
+    {
+      "task": "put_together_a_basic_pruning_kit",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/put_together_a_basic_pruning_kit.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "putting_away_Halloween_decorations",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/putting_away_Halloween_decorations.json",
+      "task_id": 2,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_1",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/putting_away_Halloween_decorations.json"
+    },
+    {
+      "task": "putting_away_toys",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/putting_away_toys.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "putting_dirty_dishes_in_sink",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/putting_dirty_dishes_in_sink.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "putting_dishes_away_after_cleaning",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/putting_dishes_away_after_cleaning.json",
+      "task_id": 11,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_1",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/putting_dishes_away_after_cleaning.json"
+    },
+    {
+      "task": "putting_shoes_on_rack",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/putting_shoes_on_rack.json",
+      "task_id": 22,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_2",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/putting_shoes_on_rack.json"
+    },
+    {
+      "task": "putting_up_Christmas_decorations_inside",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/putting_up_Christmas_decorations_inside.json",
+      "task_id": 9,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_2",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/putting_up_Christmas_decorations_inside.json"
+    },
+    {
+      "task": "re_shelving_library_books",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/re_shelving_library_books.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "rearrange_your_room",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/rearrange_your_room.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "rearranging_kitchen_furniture",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/rearranging_kitchen_furniture.json",
+      "task_id": 8,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_2",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/rearranging_kitchen_furniture.json"
+    },
+    {
+      "task": "scrubbing_bathroom_floor",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/scrubbing_bathroom_floor.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "set_up_a_coffee_station_in_your_kitchen",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/set_up_a_coffee_station_in_your_kitchen.json",
+      "task_id": 10,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_1",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/set_up_a_coffee_station_in_your_kitchen.json"
+    },
+    {
+      "task": "setting_mousetraps",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/setting_mousetraps.json",
+      "task_id": 5,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_1",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/setting_mousetraps.json"
+    },
+    {
+      "task": "setting_the_fire",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/setting_the_fire.json",
+      "task_id": 30,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_2",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/setting_the_fire.json"
+    },
+    {
+      "task": "setting_the_table",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/setting_the_table.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "setup_a_bar_for_a_cocktail_party",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/setup_a_bar_for_a_cocktail_party.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "slicing_vegetables",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/slicing_vegetables.json",
+      "task_id": 43,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_2",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/slicing_vegetables.json"
+    },
+    {
+      "task": "sorting_books_on_shelf",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/sorting_books_on_shelf.json",
+      "task_id": null,
+      "container_ancestry": true,
+      "status": "excluded_container_demonstration_unverified",
+      "reason": "No verified matching container opening demonstration; conservatively excluded, not proof of absent data."
+    },
+    {
+      "task": "sorting_bottles_cans_and_paper",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/sorting_bottles_cans_and_paper.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "sorting_household_items",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/sorting_household_items.json",
+      "task_id": 27,
+      "container_ancestry": true,
+      "status": "excluded_container_demonstration_unverified",
+      "reason": "No verified matching container opening demonstration; conservatively excluded, not proof of absent data."
+    },
+    {
+      "task": "sorting_vegetables",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/sorting_vegetables.json",
+      "task_id": 20,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_2",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/sorting_vegetables.json"
+    },
+    {
+      "task": "spraying_for_bugs",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/spraying_for_bugs.json",
+      "task_id": 38,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_3",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/spraying_for_bugs.json"
+    },
+    {
+      "task": "spraying_fruit_trees",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/spraying_fruit_trees.json",
+      "task_id": 39,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_3",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/spraying_fruit_trees.json"
+    },
+    {
+      "task": "stacking_wood",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/stacking_wood.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "store_batteries",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/store_batteries.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "store_honey",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/store_honey.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "store_produce",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/store_produce.json",
+      "task_id": null,
+      "container_ancestry": true,
+      "status": "excluded_container_demonstration_unverified",
+      "reason": "No verified matching container opening demonstration; conservatively excluded, not proof of absent data."
+    },
+    {
+      "task": "storing_food",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/storing_food.json",
+      "task_id": 24,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_1",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/storing_food.json"
+    },
+    {
+      "task": "sweeping_garage",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/sweeping_garage.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "thawing_frozen_food",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/thawing_frozen_food.json",
+      "task_id": null,
+      "container_ancestry": true,
+      "status": "excluded_container_demonstration_unverified",
+      "reason": "No verified matching container opening demonstration; conservatively excluded, not proof of absent data."
+    },
+    {
+      "task": "tidying_bathroom",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/tidying_bathroom.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "tidying_bedroom",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/tidying_bedroom.json",
+      "task_id": 18,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_2",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/tidying_bedroom.json"
+    },
+    {
+      "task": "tidying_living_room",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/tidying_living_room.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "turning_out_all_lights_before_sleep",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/turning_out_all_lights_before_sleep.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "unloading_the_car",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/unloading_the_car.json",
+      "task_id": null,
+      "container_ancestry": true,
+      "status": "excluded_container_demonstration_unverified",
+      "reason": "No verified matching container opening demonstration; conservatively excluded, not proof of absent data."
+    },
+    {
+      "task": "vacuuming_floors",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/vacuuming_floors.json",
+      "task_id": null,
+      "container_ancestry": false,
+      "status": "unsupported_champion_task",
+      "reason": "Published champion has 50 fixed task embeddings; task is absent."
+    },
+    {
+      "task": "wash_a_baseball_cap",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/wash_a_baseball_cap.json",
+      "task_id": 32,
+      "container_ancestry": false,
+      "status": "eligible",
+      "checkpoint": "checkpoint_3",
+      "spec": "/media/cody/软件/behavior_harness/configs/champion_search_suite/wash_a_baseball_cap.json"
+    },
+    {
+      "task": "wash_dog_toys",
+      "source_spec": "/media/cody/软件/behavior_harness/configs/ood99/wash_dog_toys.json",
+      "task_id": 33,
+      "container_ancestry": true,
+      "status": "excluded_container_demonstration_unverified",
+      "reason": "No verified matching container opening demonstration; conservatively excluded, not proof of absent data."
+    }
+  ],
+  "protocol": {
+    "total_steps_each": 10000,
+    "search_budget": 800,
+    "harness": "AP checkpoint024000 then task-mapped champion",
+    "direct": "same task-mapped champion from fresh start",
+    "original_success": "official BDDL",
+    "retry": "infrastructure only, fresh attempt, never partial action replay",
+    "scope": "99 existing per-task candidates, container ancestors conservatively excluded"
+  }
+}
