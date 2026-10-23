@@ -18,7 +18,7 @@
 
 ## 推理部署
 
-ModelScope私有推理包：`YouyiKou/behavior-ap-pi05-checkpoint-024000`。上传是否已完成以该库文件及服务端校验结果为准，不以此README存在为准。下载到自己的目录后：
+ModelScope公开推理包：`YouyiKou/behavior-ap-pi05-checkpoint-024000`。上传是否已完成以该库文件及服务端校验结果为准，不以此README存在为准。下载到自己的目录后：
 
 ```bash
 export AP_PYTHON=/path/to/venv/bin/python
