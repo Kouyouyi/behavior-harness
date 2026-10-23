@@ -1,0 +1,266 @@
+{
+  "training_samples": 421211,
+  "classes": 31,
+  "planned_sample_draws": 960000,
+  "raw": {
+    "largest_to_smallest_class_ratio": 195.30836236933797,
+    "entropy_effective_classes": 13.777874106957936,
+    "normalized_entropy": 0.7638537430927012
+  },
+  "sampled": {
+    "largest_to_smallest_class_ratio": 13.975276826214856,
+    "entropy_effective_classes": 24.512415510235403,
+    "normalized_entropy": 0.9316225000881815
+  },
+  "classes_detail": [
+    {
+      "motion_class": "forward",
+      "source_samples": 112107,
+      "raw_probability": 0.26615401782004744,
+      "sampled_probability": 0.11558266648858868,
+      "expected_draws_over_30000_updates": 110959.35982904513,
+      "expected_reuses_per_source_sample": 0.9897629927573223
+    },
+    {
+      "motion_class": "turn_right",
+      "source_samples": 49866,
+      "raw_probability": 0.11838722160627334,
+      "sampled_probability": 0.07708655017373985,
+      "expected_draws_over_30000_updates": 74003.08816679026,
+      "expected_reuses_per_source_sample": 1.4840389878231712
+    },
+    {
+      "motion_class": "turn_left",
+      "source_samples": 42552,
+      "raw_probability": 0.10102300272310077,
+      "sampled_probability": 0.0712092370362083,
+      "expected_draws_over_30000_updates": 68360.86755475996,
+      "expected_reuses_per_source_sample": 1.606525370247226
+    },
+    {
+      "motion_class": "open_door",
+      "source_samples": 36570,
+      "raw_probability": 0.08682109441586283,
+      "sampled_probability": 0.06601442184892681,
+      "expected_draws_over_30000_updates": 63373.84497496973,
+      "expected_reuses_per_source_sample": 1.7329462667478734
+    },
+    {
+      "motion_class": "turn_right+forward+strafe_left",
+      "source_samples": 25538,
+      "raw_probability": 0.060629945561725594,
+      "sampled_probability": 0.05516578280941691,
+      "expected_draws_over_30000_updates": 52959.151497040235,
+      "expected_reuses_per_source_sample": 2.073739192459873
+    },
+    {
+      "motion_class": "turn_left+forward",
+      "source_samples": 20561,
+      "raw_probability": 0.048814014828672564,
+      "sampled_probability": 0.04949923197046449,
+      "expected_draws_over_30000_updates": 47519.26269164591,
+      "expected_reuses_per_source_sample": 2.3111357760637086
+    },
+    {
+      "motion_class": "turn_left+forward+strafe_right",
+      "source_samples": 19754,
+      "raw_probability": 0.046898110448207665,
+      "sampled_probability": 0.048518109314571324,
+      "expected_draws_over_30000_updates": 46577.38494198847,
+      "expected_reuses_per_source_sample": 2.357871061151588
+    },
+    {
+      "motion_class": "turn_right+forward",
+      "source_samples": 17125,
+      "raw_probability": 0.040656583042703066,
+      "sampled_probability": 0.045174321048962136,
+      "expected_draws_over_30000_updates": 43367.34820700365,
+      "expected_reuses_per_source_sample": 2.5323998952994833
+    },
+    {
+      "motion_class": "forward+strafe_left",
+      "source_samples": 14591,
+      "raw_probability": 0.03464059580590251,
+      "sampled_probability": 0.04169835022526318,
+      "expected_draws_over_30000_updates": 40030.41621625265,
+      "expected_reuses_per_source_sample": 2.7435005288364502
+    },
+    {
+      "motion_class": "forward+strafe_right",
+      "source_samples": 12540,
+      "raw_probability": 0.029771302268934097,
+      "sampled_probability": 0.03865672984097898,
+      "expected_draws_over_30000_updates": 37110.46064733982,
+      "expected_reuses_per_source_sample": 2.9593668777782955
+    },
+    {
+      "motion_class": "open_lid",
+      "source_samples": 9662,
+      "raw_probability": 0.02293862221072099,
+      "sampled_probability": 0.03393203142303052,
+      "expected_draws_over_30000_updates": 32574.7501661093,
+      "expected_reuses_per_source_sample": 3.3714293278937384
+    },
+    {
+      "motion_class": "raise_view",
+      "source_samples": 9467,
+      "raw_probability": 0.02247567133811795,
+      "sampled_probability": 0.033587875327954084,
+      "expected_draws_over_30000_updates": 32244.36031483592,
+      "expected_reuses_per_source_sample": 3.4059744707759503
+    },
+    {
+      "motion_class": "turn_right+strafe_left",
+      "source_samples": 5601,
+      "raw_probability": 0.013297373525382765,
+      "sampled_probability": 0.025835039522737448,
+      "expected_draws_over_30000_updates": 24801.63794182795,
+      "expected_reuses_per_source_sample": 4.428073190828058
+    },
+    {
+      "motion_class": "turn_left+forward+strafe_left",
+      "source_samples": 4662,
+      "raw_probability": 0.011068087015771192,
+      "sampled_probability": 0.023570157172274724,
+      "expected_draws_over_30000_updates": 22627.350885383734,
+      "expected_reuses_per_source_sample": 4.85357161848643
+    },
+    {
+      "motion_class": "turn_right+forward+strafe_right",
+      "source_samples": 4608,
+      "raw_probability": 0.010939885235665735,
+      "sampled_probability": 0.02343325287479657,
+      "expected_draws_over_30000_updates": 22495.922759804707,
+      "expected_reuses_per_source_sample": 4.881927682249286
+    },
+    {
+      "motion_class": "turn_left+strafe_right",
+      "source_samples": 4336,
+      "raw_probability": 0.010294128121060467,
+      "sampled_probability": 0.02273112764376975,
+      "expected_draws_over_30000_updates": 21821.88253801896,
+      "expected_reuses_per_source_sample": 5.032721987550498
+    },
+    {
+      "motion_class": "lower_view",
+      "source_samples": 4201,
+      "raw_probability": 0.009973623670796822,
+      "sampled_probability": 0.02237446629259395,
+      "expected_draws_over_30000_updates": 21479.487640890195,
+      "expected_reuses_per_source_sample": 5.112946355841513
+    },
+    {
+      "motion_class": "strafe_left",
+      "source_samples": 3963,
+      "raw_probability": 0.009408586195517212,
+      "sampled_probability": 0.02173143374431875,
+      "expected_draws_over_30000_updates": 20862.176394546,
+      "expected_reuses_per_source_sample": 5.264238302938683
+    },
+    {
+      "motion_class": "strafe_right",
+      "source_samples": 3793,
+      "raw_probability": 0.009004987998888919,
+      "sampled_probability": 0.021260220539148004,
+      "expected_draws_over_30000_updates": 20409.811717582084,
+      "expected_reuses_per_source_sample": 5.380915295961531
+    },
+    {
+      "motion_class": "backward",
+      "source_samples": 2920,
+      "raw_probability": 0.006932392553850683,
+      "sampled_probability": 0.0186538194818861,
+      "expected_draws_over_30000_updates": 17907.666702610655,
+      "expected_reuses_per_source_sample": 6.132762569387211
+    },
+    {
+      "motion_class": "turn_left+backward",
+      "source_samples": 2764,
+      "raw_probability": 0.006562031855768249,
+      "sampled_probability": 0.01814869337734588,
+      "expected_draws_over_30000_updates": 17422.745642252044,
+      "expected_reuses_per_source_sample": 6.303453560872664
+    },
+    {
+      "motion_class": "open_drawer",
+      "source_samples": 2658,
+      "raw_probability": 0.0063103765096353135,
+      "sampled_probability": 0.017797288159175285,
+      "expected_draws_over_30000_updates": 17085.396632808275,
+      "expected_reuses_per_source_sample": 6.427914459295814
+    },
+    {
+      "motion_class": "turn_right+backward",
+      "source_samples": 2226,
+      "raw_probability": 0.0052847622687916505,
+      "sampled_probability": 0.016286918528934293,
+      "expected_draws_over_30000_updates": 15635.441787776921,
+      "expected_reuses_per_source_sample": 7.024007990915059
+    },
+    {
+      "motion_class": "turn_right+strafe_right",
+      "source_samples": 1616,
+      "raw_probability": 0.003836556975007775,
+      "sampled_probability": 0.013877045816357023,
+      "expected_draws_over_30000_updates": 13321.963983702743,
+      "expected_reuses_per_source_sample": 8.243789593875459
+    },
+    {
+      "motion_class": "turn_left+strafe_left",
+      "source_samples": 1576,
+      "raw_probability": 0.0037415926934481767,
+      "sampled_probability": 0.013704224057214241,
+      "expected_draws_over_30000_updates": 13156.055094925672,
+      "expected_reuses_per_source_sample": 8.347750694749791
+    },
+    {
+      "motion_class": "turn_left+backward+strafe_left",
+      "source_samples": 1316,
+      "raw_probability": 0.0031243248633107874,
+      "sampled_probability": 0.012522882006439418,
+      "expected_draws_over_30000_updates": 12021.966726181841,
+      "expected_reuses_per_source_sample": 9.135233074606262
+    },
+    {
+      "motion_class": "turn_left+backward+strafe_right",
+      "source_samples": 1302,
+      "raw_probability": 0.0030910873647649276,
+      "sampled_probability": 0.01245609282618648,
+      "expected_draws_over_30000_updates": 11957.849113139022,
+      "expected_reuses_per_source_sample": 9.184215908708927
+    },
+    {
+      "motion_class": "turn_right+backward+strafe_left",
+      "source_samples": 1220,
+      "raw_probability": 0.0028964105875677513,
+      "sampled_probability": 0.012057471922328597,
+      "expected_draws_over_30000_updates": 11575.173045435453,
+      "expected_reuses_per_source_sample": 9.48784675855365
+    },
+    {
+      "motion_class": "backward+strafe_right",
+      "source_samples": 811,
+      "raw_probability": 0.0019254008086208574,
+      "sampled_probability": 0.009830752695651368,
+      "expected_draws_over_30000_updates": 9437.522587825313,
+      "expected_reuses_per_source_sample": 11.636895915937501
+    },
+    {
+      "motion_class": "turn_right+backward+strafe_right",
+      "source_samples": 731,
+      "raw_probability": 0.0017354722455016607,
+      "sampled_probability": 0.009333295849011318,
+      "expected_draws_over_30000_updates": 8959.964015050866,
+      "expected_reuses_per_source_sample": 12.25713271552786
+    },
+    {
+      "motion_class": "backward+strafe_left",
+      "source_samples": 574,
+      "raw_probability": 0.001362737440380237,
+      "sampled_probability": 0.008270509981725618,
+      "expected_draws_over_30000_updates": 7939.689582456594,
+      "expected_reuses_per_source_sample": 13.83221181612647
+    }
+  ],
+  "interpretation": "Sampling reduces imbalance but is not uniform. Expected draw counts are not unique examples. Primitive inclusion probabilities are multi-label and do not sum to one. Balanced exposure does not establish instruction following or generalization."
+}

@@ -1,0 +1,23 @@
+{
+  "args": {
+    "data_root": "/cs/kyy/behavior_ap_experiment/training_horizon_v2",
+    "steps": 30000,
+    "resume": "/cs/kyy/behavior_ap_experiment/runs/pi05_goal_horizon_v2/checkpoint_001000",
+    "dtype": "float32",
+    "memory_fraction": 0.82,
+    "batch_size": 8,
+    "accumulation": 4,
+    "run_name": "pi05_goal_horizon_v2_b8",
+    "expert_only": false,
+    "unbalanced": false,
+    "workers": 4
+  },
+  "train_examples": 421211,
+  "trainable_parameters": 4143404816,
+  "base_weights": "/cs/models/pi05_base",
+  "dtype": "float32",
+  "temporal_loss_mask": true,
+  "state_dim": 25,
+  "action_dim": 23,
+  "status": "running"
+}

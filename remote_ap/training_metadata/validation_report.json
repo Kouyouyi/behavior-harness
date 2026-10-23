@@ -1,0 +1,237 @@
+{
+  "passed": true,
+  "dataset_contract": {
+    "schema_version": 1,
+    "train_parquet_sha256": "9d1b23eab31682871275d54cec8cfc9c1ecac24029edd9a599ba0d2a67474be2",
+    "normalization_sha256": "101b51cbd6899988e99ef553e0b92033028c63dc5b8f34c2e05895c03e92ed0b",
+    "state_indices": [
+      0,
+      1,
+      2,
+      53,
+      54,
+      55,
+      56,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      24,
+      25,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      49,
+      50
+    ],
+    "image_keys": [
+      "observation.images.base_0_rgb",
+      "observation.images.left_wrist_0_rgb",
+      "observation.images.right_wrist_0_rgb"
+    ],
+    "action_dim": 23,
+    "prediction_steps": 32,
+    "execution_steps": 8,
+    "language": "qualitative_direction_and_perception_goal",
+    "seed": 20261016
+  },
+  "training_samples": 421211,
+  "unique_prompts_checked": 5207,
+  "classes": 31,
+  "real_decoded_samples": [
+    {
+      "sample_id": "5631:8706:8760",
+      "motion_class": "backward",
+      "valid_steps": 32,
+      "instruction": "向后移动，观察并接近monitor、swivel chair。"
+    },
+    {
+      "sample_id": "3111:9315:9405",
+      "motion_class": "backward+strafe_left",
+      "valid_steps": 32,
+      "instruction": "向后移动并向左平移，观察并接近plywood。"
+    },
+    {
+      "sample_id": "3553:133:223",
+      "motion_class": "backward+strafe_right",
+      "valid_steps": 32,
+      "instruction": "向后移动并向右平移，观察并接近冰箱。"
+    },
+    {
+      "sample_id": "14359:5310:5400",
+      "motion_class": "forward",
+      "valid_steps": 32,
+      "instruction": "向前移动，观察并接近toolbox。"
+    },
+    {
+      "sample_id": "10911:1740:1830",
+      "motion_class": "forward+strafe_left",
+      "valid_steps": 32,
+      "instruction": "向前移动并向左平移，观察并接近toy box。"
+    },
+    {
+      "sample_id": "11725:6720:6810",
+      "motion_class": "forward+strafe_right",
+      "valid_steps": 32,
+      "instruction": "向前移动并向右平移，观察并接近log。"
+    },
+    {
+      "sample_id": "13641:4890:4980",
+      "motion_class": "lower_view",
+      "valid_steps": 32,
+      "instruction": "降低观察位置，观察并接近branch。"
+    },
+    {
+      "sample_id": "8722:1657:1837",
+      "motion_class": "open_door",
+      "valid_steps": 32,
+      "instruction": "打开冰箱，观察冰箱内部。"
+    },
+    {
+      "sample_id": "17200:390:570",
+      "motion_class": "open_drawer",
+      "valid_steps": 32,
+      "instruction": "拉开下柜，观察下柜内部。"
+    },
+    {
+      "sample_id": "13606:2287:2467",
+      "motion_class": "open_lid",
+      "valid_steps": 32,
+      "instruction": "揭开recycling bin，观察recycling bin内部。"
+    },
+    {
+      "sample_id": "19328:1291:1381",
+      "motion_class": "raise_view",
+      "valid_steps": 32,
+      "instruction": "抬高观察位置，观察并接近frying pan。"
+    },
+    {
+      "sample_id": "2212:4223:4241",
+      "motion_class": "strafe_left",
+      "valid_steps": 18,
+      "instruction": "向左平移，观察并接近盘子。"
+    },
+    {
+      "sample_id": "12551:3969:4003",
+      "motion_class": "strafe_right",
+      "valid_steps": 32,
+      "instruction": "向右平移，观察并接近cutting board。"
+    },
+    {
+      "sample_id": "11665:6990:7080",
+      "motion_class": "turn_left",
+      "valid_steps": 32,
+      "instruction": "向左转，观察并接近log。"
+    },
+    {
+      "sample_id": "15903:7392:7422",
+      "motion_class": "turn_left+backward",
+      "valid_steps": 30,
+      "instruction": "向左转并向后移动，观察并接近bed。"
+    },
+    {
+      "sample_id": "18456:1590:1680",
+      "motion_class": "turn_left+backward+strafe_left",
+      "valid_steps": 32,
+      "instruction": "向左转并向后移动并向左平移，观察并接近laptop。"
+    },
+    {
+      "sample_id": "10135:9660:9750",
+      "motion_class": "turn_left+backward+strafe_right",
+      "valid_steps": 32,
+      "instruction": "向左转并向后移动并向右平移，观察并接近electric refrigerator。"
+    },
+    {
+      "sample_id": "775:10916:11006",
+      "motion_class": "turn_left+forward",
+      "valid_steps": 32,
+      "instruction": "向左转并向前移动，观察并接近冰箱。"
+    },
+    {
+      "sample_id": "17674:5386:5476",
+      "motion_class": "turn_left+forward+strafe_left",
+      "valid_steps": 32,
+      "instruction": "向左转并向前移动并向左平移，观察并接近chair。"
+    },
+    {
+      "sample_id": "1348:540:609",
+      "motion_class": "turn_left+forward+strafe_right",
+      "valid_steps": 32,
+      "instruction": "向左转并向前移动并向右平移，观察并接近wicker。"
+    },
+    {
+      "sample_id": "3969:3522:3597",
+      "motion_class": "turn_left+strafe_left",
+      "valid_steps": 32,
+      "instruction": "向左转并向左平移，观察并接近toolbox。"
+    },
+    {
+      "sample_id": "18840:8040:8130",
+      "motion_class": "turn_left+strafe_right",
+      "valid_steps": 32,
+      "instruction": "向左转并向右平移，观察并接近floors。"
+    },
+    {
+      "sample_id": "11156:2580:2670",
+      "motion_class": "turn_right",
+      "valid_steps": 32,
+      "instruction": "向右转，观察并接近hardback。"
+    },
+    {
+      "sample_id": "17045:6270:6360",
+      "motion_class": "turn_right+backward",
+      "valid_steps": 32,
+      "instruction": "向右转并向后移动，观察并接近booth。"
+    },
+    {
+      "sample_id": "17768:9810:9900",
+      "motion_class": "turn_right+backward+strafe_left",
+      "valid_steps": 32,
+      "instruction": "向右转并向后移动并向左平移，观察并接近nightstand。"
+    },
+    {
+      "sample_id": "5359:29874:29964",
+      "motion_class": "turn_right+backward+strafe_right",
+      "valid_steps": 32,
+      "instruction": "向右转并向后移动并向右平移，观察并接近下柜。"
+    },
+    {
+      "sample_id": "15262:6630:6681",
+      "motion_class": "turn_right+forward",
+      "valid_steps": 32,
+      "instruction": "向右转并向前移动，观察并接近water glass。"
+    },
+    {
+      "sample_id": "5075:10687:10766",
+      "motion_class": "turn_right+forward+strafe_left",
+      "valid_steps": 32,
+      "instruction": "向右转并向前移动并向左平移，观察并接近冰箱。"
+    },
+    {
+      "sample_id": "4149:4253:4343",
+      "motion_class": "turn_right+forward+strafe_right",
+      "valid_steps": 32,
+      "instruction": "向右转并向前移动并向右平移，观察并接近wicker。"
+    },
+    {
+      "sample_id": "6112:6034:6124",
+      "motion_class": "turn_right+strafe_left",
+      "valid_steps": 32,
+      "instruction": "向右转并向左平移，观察并接近lighter。"
+    },
+    {
+      "sample_id": "5856:13690:13780",
+      "motion_class": "turn_right+strafe_right",
+      "valid_steps": 32,
+      "instruction": "向右转并向右平移，观察并接近laptop。"
+    }
+  ],
+  "scope": "Full-index splits and inherited audit flags; one actual decoded video/state/action sample per training combination; no closed-loop validation."
+}

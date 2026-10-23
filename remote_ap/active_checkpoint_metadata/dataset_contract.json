@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "train_parquet_sha256": "9d1b23eab31682871275d54cec8cfc9c1ecac24029edd9a599ba0d2a67474be2",
+  "normalization_sha256": "101b51cbd6899988e99ef553e0b92033028c63dc5b8f34c2e05895c03e92ed0b",
+  "state_indices": [
+    0,
+    1,
+    2,
+    53,
+    54,
+    55,
+    56,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    24,
+    25,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    49,
+    50
+  ],
+  "image_keys": [
+    "observation.images.base_0_rgb",
+    "observation.images.left_wrist_0_rgb",
+    "observation.images.right_wrist_0_rgb"
+  ],
+  "action_dim": 23,
+  "prediction_steps": 32,
+  "execution_steps": 8,
+  "language": "qualitative_direction_and_perception_goal",
+  "seed": 20261016
+}
