@@ -1,0 +1,134 @@
+{
+  "repo": "YouyiKou/behavior-ap-pi05-checkpoint-024000",
+  "url": "https://modelscope.cn/models/YouyiKou/behavior-ap-pi05-checkpoint-024000",
+  "status": "complete",
+  "visibility": "public",
+  "anonymous_access_verified": true,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 1579,
+      "sha256": "31aec0af75cd3f5cb25c769c7902080d324f5052c46a268fb7ffadd36d6cffc1"
+    },
+    {
+      "path": "READY.json",
+      "size": 33,
+      "sha256": "eb13a533576c56e65e4b3b22c05571e1c57c8da51d1e00427b4f4cf398f425cd"
+    },
+    {
+      "path": "config.json",
+      "size": 2421,
+      "sha256": "d30bb849e1ce1717696f6ceee8fc742a8dd578778aa29d04b7dacef952f8c26f"
+    },
+    {
+      "path": "dataset_contract.json",
+      "size": 723,
+      "sha256": "a11360daa9f918b40dccc8daf2614b6a16a2de7da745a40c4da94463286b91c5"
+    },
+    {
+      "path": "model.safetensors",
+      "size": 16573760032,
+      "sha256": "6c69e7cc1f029f5b3d42b3857419a51a89a96a4d8d5419fbcb75c6fba31b3329"
+    },
+    {
+      "path": "norm_stats.json",
+      "size": 4005,
+      "sha256": "c14a2f241df4ad9d379603fb791b9d43b78a863d49cc5214a2daf474cc7c150d"
+    },
+    {
+      "path": "tokenizer/added_tokens.json",
+      "size": 24,
+      "sha256": "7d0bad90030d638a4bf89a82e91206e25f1fbe0012f14bca21666a64b643bc49"
+    },
+    {
+      "path": "tokenizer/config.json",
+      "size": 1027,
+      "sha256": "e00c72cdff16296bf1229c3267b99f5247d8c740cae84336866338d64fa7918f"
+    },
+    {
+      "path": "tokenizer/special_tokens_map.json",
+      "size": 607,
+      "sha256": "5ef37093ae4236587b6e8266acb815b46e2db8ce656c66552bfa574d32880405"
+    },
+    {
+      "path": "tokenizer/tokenizer.json",
+      "size": 17549604,
+      "sha256": "ef6773c135b77b834de1d13c75a4c98ab7a3684ffd602d1831e1f1bf5467c563"
+    },
+    {
+      "path": "tokenizer/tokenizer.model",
+      "size": 4264023,
+      "sha256": "8986bb4f423f07f8c7f70d0dbe3526fb2316056c17bae71b1ea975e77a168fc6"
+    },
+    {
+      "path": "tokenizer/tokenizer_config.json",
+      "size": 39968,
+      "sha256": "3259402b1d1802e02417d7bff75a889ec61d359d15be6050a957b307c48edbbe"
+    }
+  ],
+  "verification": [
+    {
+      "path": "README.md",
+      "size_verified": true,
+      "remote_sha256_verified": true
+    },
+    {
+      "path": "READY.json",
+      "size_verified": true,
+      "remote_sha256_verified": true
+    },
+    {
+      "path": "config.json",
+      "size_verified": true,
+      "remote_sha256_verified": true
+    },
+    {
+      "path": "dataset_contract.json",
+      "size_verified": true,
+      "remote_sha256_verified": true
+    },
+    {
+      "path": "model.safetensors",
+      "size_verified": true,
+      "remote_sha256_verified": true
+    },
+    {
+      "path": "norm_stats.json",
+      "size_verified": true,
+      "remote_sha256_verified": true
+    },
+    {
+      "path": "tokenizer/added_tokens.json",
+      "size_verified": true,
+      "remote_sha256_verified": true
+    },
+    {
+      "path": "tokenizer/config.json",
+      "size_verified": true,
+      "remote_sha256_verified": true
+    },
+    {
+      "path": "tokenizer/special_tokens_map.json",
+      "size_verified": true,
+      "remote_sha256_verified": true
+    },
+    {
+      "path": "tokenizer/tokenizer.json",
+      "size_verified": true,
+      "remote_sha256_verified": true
+    },
+    {
+      "path": "tokenizer/tokenizer.model",
+      "size_verified": true,
+      "remote_sha256_verified": true
+    },
+    {
+      "path": "tokenizer/tokenizer_config.json",
+      "size_verified": true,
+      "remote_sha256_verified": true
+    }
+  ],
+  "checksum_manifest_verified": true,
+  "completed": 1792775793.3788478,
+  "readme_normalization": "ModelScope canonicalizes YAML; README SHA256 matches downloaded server content"
+}
