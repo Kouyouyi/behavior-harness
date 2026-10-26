@@ -11,3 +11,21 @@ deps/
 *.mp4
 *.tar.gz
 *.bundle
+# SeekAct generated artifacts / private deployment files
+.pytest_cache/
+seekact/runtime/
+models/
+data/
+datasets/
+runs/
+checkpoints/
+*.safetensors
+*.pt
+*.pth
+*.npy
+*.npz
+*.parquet
+*.log
+*.egg-info/
+dist/
+build/

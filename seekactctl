@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+repo=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+export PYTHONPATH="$repo/seekact${PYTHONPATH:+:$PYTHONPATH}"
+exec "${SEEKACT_AGENT_PYTHON:-python3}" "$repo/scripts/seekact/cli.py" "$@"

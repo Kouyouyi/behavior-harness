@@ -1,0 +1,41 @@
+{
+  "project": "SeekAct",
+  "source_repository": "https://github.com/jiachengliu3/Symbiosis-Agent",
+  "source_commit": "05c51709bdf7862a26aa0a513d77d5ce15b10564",
+  "note": "Local BEHAVIOR adaptations, Qwen monitor, configurable paths and naming changes included. No weights, raw demonstrations or secrets.",
+  "champion": {
+    "repository": "https://github.com/IliaLarchenko/behavior-1k-solution",
+    "commit": "ca556f74a455cef7987a2be4537b5ac85cc56dd7",
+    "openpi_commit": "01177e0242a1c7e8fad2547caa0e987def614cda",
+    "weight_revision": "89545bc1b7aa7f2e687bc0032d091f132d715d4e",
+    "local_adapters": [
+      "src/b1k/policies/b1k_policy.py",
+      "src/b1k/shared/eval_b1k_wrapper.py",
+      "src/b1k/shared/eval_utils_2025.py",
+      "openpi/src/openpi/policies/b1k_policy.py"
+    ],
+    "note": "Vendored actual inference-compatible working tree; Apache-2.0 license retained. Includes training code. Original published correction rules retained."
+  },
+  "simulator": {
+    "repository": "https://github.com/Kouyouyi/behavior-ap",
+    "commit": "f99653f78f94fcb0547f9575c52019dc47fa8f6b",
+    "external_dependency": true
+  },
+  "verification": {
+    "seekact_unit_tests_passed": 106,
+    "python_files_ast_parsed": 356,
+    "real_new_physical_trials_run_for_this_release": 0,
+    "scope": "Packaging, unit tests, current-code dependency import and source integrity only; not a new model/physics benchmark",
+    "champion_runtime_import_verified_on_remote": true
+  },
+  "deployment_path_overrides": [
+    "SEEKACT_SIM_ROOT",
+    "SEEKACT_SIM_PYTHON",
+    "SEEKACT_AGENT_PYTHON",
+    "SEEKACT_GPU_LOCK",
+    "SEEKACT_SUDO_HELPER",
+    "BEHAVIOR_ASSET_ROOT",
+    "AP_PROJECT_ROOT",
+    "AP_RAW_DATA_ROOT"
+  ]
+}

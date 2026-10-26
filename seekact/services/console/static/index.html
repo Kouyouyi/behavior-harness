@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1719">
+  <meta name="description" content="Humanoid Agent · G1 具身智能展示大屏，16:9 全屏观测与 29 电机温度总览。">
+  <title>Humanoid Agent · SeekAct Robotics · G1 具身智能展示大屏</title>
+  <link rel="stylesheet" href="/assets/console.css">
+  <script src="/assets/console.js" defer></script>
+  <script src="/assets/composer.js" defer></script>
+</head>
+<body>
+  <main id="wallboard" class="wallboard" aria-label="G1 16:9 展示大屏">
+    <header class="masthead">
+      <div class="brand"><div class="brand-wordmark"><span class="brand-logo">Humanoid <b>Agent</b><i></i></span><span class="brand-company">SeekAct Robotics</span></div><span class="brand-divider"></span><div><h1>具身智能 · 在线任务大屏</h1><span class="eyebrow">ROBOT AGENT EXPLORATION</span></div></div>
+      <div class="header-status"><span class="mode-badge" id="mode-badge">正在连接</span><span class="link-state" id="connection-status"><i></i>等待数据</span><div class="header-clock"><strong id="clock">—</strong><span id="date">—</span></div></div>
+    </header>
+
+    <section class="mission-bar" aria-label="用户指令与任务状态">
+      <div class="mission-intro"><span class="section-index">01 / USER INSTRUCTION</span><h2 id="task-title">等待任务指令</h2><div><span class="state-pill" id="task-status">待命</span><span class="mission-meta" id="task-meta">由用户定义目标 · Agent 自主执行</span></div></div>
+      <div class="mission-current"><span class="eyebrow">CURRENT ACTIVITY</span><strong id="task-activity">等待 Agent 事件</strong><span>依据观测与反馈持续更新</span></div>
+      <div class="mission-completion"><strong id="task-elapsed">—</strong><span>任务用时 / ELAPSED</span></div>
+    </section>
+
+    <div class="content-grid">
+        <section class="panel vision-panel" aria-labelledby="vision-title">
+          <div class="panel-header"><div class="panel-heading"><span class="section-index">02</span><h2 id="vision-title">机器人第一视角</h2><span class="muted-label">FIRST-PERSON VIEW</span></div><span class="source-label" id="camera-label">等待相机</span></div>
+          <div class="camera-stage" id="camera-stage">
+            <img id="camera-image" class="hidden" alt="等待 G1 第一视角画面">
+            <div class="camera-shade"></div>
+            <div class="camera-hud"><span class="camera-chip" id="camera-source">NO SIGNAL</span><span class="camera-chip">G1 / RGB-D</span></div>
+            <div class="target-box hidden" id="target-box"><span>米老鼠 <small>演示标注</small></span><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i><b>+</b></div>
+            <div class="camera-empty" id="camera-empty"><span data-icon="camera"></span><strong>等待第一视角信号</strong><p>连接相机数据后自动显示</p></div>
+            <div class="camera-caption"><div><span class="eyebrow">OBSERVE · ACT · VERIFY</span><strong id="camera-caption">让机器人的每一步，都清晰可见。</strong><span id="camera-note">正在等待观测数据</span></div><div class="frame-meta"><span>HEAD CAMERA</span><strong id="frame-detail">—</strong></div></div>
+            <div class="stale-overlay hidden" id="camera-stale">画面已过期 · 等待新观测</div>
+          </div>
+          <div class="vision-footer"><span><i class="status-dot"></i><span id="vision-footer-text">观测链路等待连接</span></span><span id="robot-subtitle">UNITREE G1 · 29 BODY MOTORS</span></div>
+        </section>
+
+      <section class="panel conversation-panel" aria-labelledby="dialogue-title">
+        <div class="panel-header"><div class="panel-heading"><span class="section-index">03</span><h2 id="dialogue-title">与 G1 对话</h2><span class="muted-label">AGENT CONVERSATION</span></div><span class="source-label" id="chat-mode">会话观测</span></div>
+        <div class="conversation-thread" id="conversation-thread">
+          <div id="conversation-history"></div>
+          <article class="user-message"><div class="conversation-meta"><span>你</span><time id="user-time">—</time></div><p id="user-text">等待用户指令</p></article>
+          <article class="agent-message">
+            <div class="agent-identity"><span class="agent-avatar" data-icon="sparkles"></span><strong>G1 Agent</strong><span>RAX</span></div>
+            <div class="agent-plan hidden" id="agent-plan"><div class="plan-heading"><span>任务计划</span><small id="plan-source">本次演示</small><span id="plan-count"></span></div><div id="plan-steps" class="plan-steps"></div><p id="plan-note"></p></div>
+            <div class="agent-work" id="agent-work"><div class="work-heading"><span class="work-orbit"></span><strong id="agent-status">等待任务</strong><span id="work-elapsed"></span></div><p id="decision-text">观测反馈与判断摘要将在这里更新。</p></div>
+            <div class="tool-card hidden" id="tool-card"><div class="tool-heading"><span data-icon="terminal"></span><strong id="tool-name">MCP</strong><span id="tool-status">调用记录</span></div><pre id="tool-arguments"></pre><pre id="tool-result" class="tool-result hidden"></pre></div>
+            <div class="agent-output" id="agent-output"><span id="agent-text"></span><i class="typing-caret hidden" id="typing-caret"></i></div>
+          </article>
+        </div>
+        <form class="message-composer" id="message-form" aria-label="发送消息">
+          <label class="sr-only" for="message-input">给 Humanoid Agent 的消息</label>
+          <textarea id="message-input" rows="2" maxlength="1000" placeholder="输入你的指令，或点击麦克风说话…" aria-describedby="composer-status" spellcheck="false"></textarea>
+          <div class="composer-tools"><span id="composer-mode">演示会话</span><div class="composer-actions"><span id="message-count">0 / 1000</span><button id="voice-button" class="voice-button" type="button" aria-label="开始语音输入" aria-pressed="false" title="语音输入"><span data-icon="mic"></span></button><button id="send-button" class="send-button" type="submit" aria-label="发送消息" disabled><span data-icon="send"></span></button></div></div>
+          <p id="composer-status" class="composer-status" role="status" aria-live="polite">Enter 发送 · Shift + Enter 换行</p>
+        </form>
+        <div class="conversation-footer"><span class="conversation-live"><i></i><span id="conversation-caption">自动跟随最新输出</span></span><span>处理状态 · 工具调用 · 公开摘要</span></div>
+      </section>
+
+      <section class="panel thermal-panel" aria-labelledby="thermal-title">
+        <div class="thermal-top">
+        <div class="panel-header"><div class="panel-heading"><span class="section-index">04</span><h2 id="thermal-title">全身电机温度</h2><span class="muted-label">29 MOTORS</span></div><span class="source-label" id="thermal-source">等待遥测</span></div>
+        <div class="thermal-summary"><div class="temperature-peak"><span>最高电机温度</span><strong><b id="max-temp">—</b><small>°C</small></strong><span id="hottest-joint">外壳 / 绕组较大值</span></div><div class="thermal-counts"><div class="count normal"><strong id="normal-count">00</strong><span>正常</span></div><div class="count warning"><strong id="warning-count">00</strong><span>预警</span></div><div class="count critical"><strong id="critical-count">00</strong><span>告警</span></div><div class="count unknown"><strong id="unknown-count">29</strong><span>未就绪</span></div></div></div>
+        </div>
+        <div class="motor-groups" id="motor-groups" aria-label="全部 29 个身体电机"></div>
+        <div class="thermal-bottom">
+        <div class="thermal-alert" id="thermal-alert"><span class="alert-indicator"></span><span id="alert-text">等待电机温度数据</span><span id="thermal-freshness">—</span></div>
+        <div class="thermal-legend"><span class="legend-item"><i class="normal"></i>正常 &lt;85°C</span><span class="legend-item"><i class="warning"></i>预警 ≥85°C</span><span class="legend-item"><i class="critical"></i><span id="red-threshold">告警 ≥90°C / 电机故障</span></span></div>
+        <div class="thermal-rule-note" id="thermal-rule-note">踝部告警降至 85°C 以下解除 · 灰色表示数据失效</div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="board-footer"><span class="footer-source" id="footer-source">演示与实机数据明确区分</span><span id="connection-error" class="connection-error hidden" role="alert">数据连接中断 · 当前值已标记过期</span><span class="footer-right"><span>SEEKACT ROBOTICS / HUMANOID AGENT</span><button id="fullscreen-button" aria-label="全屏展示" title="全屏展示"><span data-icon="expand"></span></button></span></footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,4 @@
+# Minimal unprivileged GPT/Qwen orchestration environment, Python3.11.
+# Isaac/OmniGibson, AP torch and champion JAX runtimes are installed separately.
+numpy>=1.26,<2
+Pillow>=10

@@ -1,9 +1,10 @@
+import os
 """Audit all indexed supervision horizons without changing the live training dataset."""
 from pathlib import Path
 import json,time
 import numpy as np,pandas as pd,pyarrow.parquet as pq
 from direction_metrics import DIRECTIONS
-ROOT=Path("/cs/kyy/behavior_ap_experiment");DATA=Path("/cs/datasets/behavior2026_dual_language");OUT=ROOT/"evaluation/horizon_audit";OUT.mkdir(exist_ok=True)
+ROOT=Path(os.environ.get('AP_PROJECT_ROOT',str(Path.cwd()/'ap_work')));DATA=Path(os.environ['AP_RAW_DATA_ROOT']);OUT=ROOT/"evaluation/horizon_audit";OUT.mkdir(exist_ok=True)
 cols=["sample_id","data_path","row_start","frame_start","frame_end_exclusive","motion_tags"]
 frames=[]
 for split in ("train","validation","test","radio_task_holdout"):

@@ -1,8 +1,9 @@
+import os
 from pathlib import Path
 from collections import Counter
 import json,numpy as np,pandas as pd
 from training_data import ROOT,STATE_IDX
-OUT=Path('/cs/kyy/behavior_ap_experiment');rng=np.random.default_rng(20261016)
+OUT=Path(os.environ.get('AP_PROJECT_ROOT',str(Path.cwd()/'ap_work')));rng=np.random.default_rng(20261016)
 status=json.loads((OUT/'reports/semantic_index_status.json').read_text());assert status['status']=='complete' and status['files']==955 and not status['errors'],status
 counts=Counter();splits={};aa=[];ss=[];preview=[]
 for p in sorted((OUT/'index').glob('*/*.parquet')):

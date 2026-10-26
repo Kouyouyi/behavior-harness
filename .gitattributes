@@ -1,0 +1,2 @@
+# Preserve upstream sources and patch payloads byte-for-byte; their original whitespace is retained.
+third_party/** -whitespace

@@ -1,0 +1,26 @@
+# Machine-local storage (a symlink to the data disk).
+/runtime
+/external
+/local_tests/*
+!/local_tests/unit/
+!/local_tests/README.md
+!/local_tests/goldens/
+
+# Local orchestration state and caches.
+/.agents
+/.codex
+/.dtach
+/.pytest_cache
+/.ruff_cache
+/.local-runtime
+**/__pycache__/
+*.py[cod]
+*.log
+
+# IDE and OS metadata.
+.DS_Store
+.idea/
+.vscode/
+# Isolated local feature checkouts.
+/.worktrees/
+/worktrees/

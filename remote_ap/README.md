@@ -39,7 +39,7 @@ bash remote_ap/train.sh --steps 30000 --batch-size 8 --accumulation 4 \
 
 精确历史参数见`training_metadata/run-config.json`；上面仅为启动示例，不能替代实际配置。训练不会自动下载原始数据和基座。使用新的run-name，续训需显式`--resume`并匹配数据契约。推理包不含约25GB的`training_state.pt`，所以它不支持精确恢复原Adam/RNG状态；如需精确续训应另行获取该文件。
 
-原始预处理脚本保留了远端绝对路径，重建训练集前应检查顶部ROOT/OUT等路径；脚本拒绝覆盖既有训练版本。数据集分片和源视频不在Git/ModelScope推理包中。
+SeekAct 整合为预处理脚本增加 AP_PROJECT_ROOT / AP_RAW_DATA_ROOT 路径覆盖；不修改标签、归一化或划分算法。历史 provenance.json 的 hash 是原导出快照，整合修改见 docs/SEEKACT_PROVENANCE.json。重建训练集前应检查严格的数据审计条件；脚本拒绝覆盖既有训练版本。数据集分片和源视频不在Git/ModelScope推理包中。
 
 ## 模型与评测边界
 

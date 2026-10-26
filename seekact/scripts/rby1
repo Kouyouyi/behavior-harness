@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+# Short operator command for the Rainbow RB-Y1. Symlink it onto PATH, e.g. ~/.local/bin/rby1.
+#   rby1 arm [minutes]      arm the newest session until the run ends or `disarm` (no time limit
+#                           unless minutes are given; asks you to confirm the e-stop)
+#   rby1 disarm             disarm EVERY session (a running motion stops and the robot holds)
+#   rby1 status             arming state of recent sessions
+#   rby1 requests           what the agent is asking the operator for
+#   rby1 reply [text]       answer the oldest open request ("done" for a reset)
+#   rby1 ship [--dry-run]   zip and ship finished sessions now (services.runtime_ship --sweep;
+#                           needs RAX_SHIP_DEST)
+set -euo pipefail
+SCRIPT="$(readlink -f "${BASH_SOURCE[0]}")"
+PROJECT_ROOT="$(cd "$(dirname "$SCRIPT")/.." && pwd)"
+PYTHON="${RAX_PYTHON:-$(command -v python3 || true)}"
+[[ -x "$PYTHON" ]] || { echo "Missing Python: '$PYTHON' (set RAX_PYTHON to the robot service environment's python)" >&2; exit 2; }
+cd "$PROJECT_ROOT"  # the current directory comes first on sys.path: never pick up another repo
+if [[ "${1:-}" == ship ]]; then
+    shift
+    PYTHONPATH="$PROJECT_ROOT" exec "$PYTHON" -m services.runtime_ship --sweep "$@"
+fi
+PYTHONPATH="$PROJECT_ROOT" exec "$PYTHON" - "$@" <<'PY'
+import sys, time
+from services import arming
+from services.controller import operator
+from services.storage_root import artifact_root
+
+sessions = sorted((p.parent for p in (artifact_root()/'sessions').glob('*/operator-input.json')),
+                  key=lambda p: (p/'operator-input.json').stat().st_mtime)
+action = sys.argv[1] if len(sys.argv) > 1 else 'status'
+
+def ask(prompt):
+    """Prompt on the terminal: this script's own stdin is the program text."""
+    try:
+        with open('/dev/tty', 'w') as out, open('/dev/tty') as tty:
+            out.write(prompt)
+            out.flush()
+            return tty.readline().strip()
+    except OSError:
+        sys.exit('no terminal to confirm on')
+
+
+def line(root):
+    state = arming.read(root)
+    extra = '' if not state.get('until') else f" until {time.strftime('%H:%M', time.localtime(state['until']))}"
+    return f"{'ARMED   ' if state['armed'] else 'disarmed'}{extra}  {root.name}"
+
+if action == 'disarm':
+    for root in sessions:
+        if arming.read(root)['armed']:
+            arming.write(root, False, reason='disarmed by the operator')
+    print('all sessions disarmed; a running motion stops within one control period and the robot holds')
+elif action == 'arm':
+    if not sessions:
+        sys.exit('no sessions')
+    root = sessions[-1]
+    minutes = float(sys.argv[2]) if len(sys.argv) > 2 else None
+    print(f'session: {root.name}')
+    if ask('Person at the emergency stop, base path and arm workspace clear? Type ARM: ') != 'ARM':
+        sys.exit('not armed')
+    arming.write(root, True, minutes=minutes)
+    print(line(root))
+elif action == 'status':
+    for root in sessions[-5:]:
+        print(line(root))
+        for request in operator.pending(root):
+            print(f"   OPEN {request['kind'].upper()} {request['id']}: {request['message']}")
+elif action in ('requests', 'reply'):
+    open_requests = sorted(((r['created'], root, r) for root in sessions for r in operator.pending(root)),
+                           key=lambda item: item[0])
+    if not open_requests:
+        sys.exit('no open requests')
+    if action == 'requests':
+        for _, root, r in open_requests:
+            print(f"{r['kind'].upper():5s} {time.strftime('%H:%M:%S', time.localtime(r['created']))} {root.name}\n  {r['message']}")
+    else:
+        _, root, r = open_requests[0]
+        text = ' '.join(sys.argv[2:]) or ('Scene reset done.' if r['kind'] == 'reset' else '')
+        if not text:
+            text = ask(f"{r['kind'].upper()}: {r['message']}\nYour answer: ")
+        operator.reply(root, r['id'], text, by='rby1-cli')
+        print(f"answered {r['kind']} request {r['id']}")
+else:
+    sys.exit('usage: rby1 arm [minutes] | disarm | status | requests | reply [text] | ship [--dry-run]')
+PY

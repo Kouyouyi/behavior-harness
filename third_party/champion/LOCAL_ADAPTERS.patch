@@ -1,0 +1,26 @@
+diff --git a/src/b1k/policies/b1k_policy.py b/src/b1k/policies/b1k_policy.py
+index 140a5a2..1c6d784 100644
+--- a/src/b1k/policies/b1k_policy.py
++++ b/src/b1k/policies/b1k_policy.py
+@@ -12,7 +12,7 @@ import numpy as np
+ 
+ from openpi import transforms
+ from openpi.models import model as _model
+-from omnigibson.learning.utils.eval_utils import PROPRIOCEPTION_INDICES
++from b1k.shared.eval_utils_2025 import PROPRIOCEPTION_INDICES
+ 
+ 
+ def make_b1k_example() -> dict:
+diff --git a/src/b1k/shared/eval_b1k_wrapper.py b/src/b1k/shared/eval_b1k_wrapper.py
+index c7766a5..3d44eab 100644
+--- a/src/b1k/shared/eval_b1k_wrapper.py
++++ b/src/b1k/shared/eval_b1k_wrapper.py
+@@ -11,7 +11,7 @@ from openpi_client.image_tools import resize_with_pad
+ from b1k.policies.b1k_policy import extract_state_from_proprio
+ from b1k.models.pi_behavior_config import TASK_NUM_STAGES
+ from b1k.shared.correction_rules import apply_correction_rules, check_gripper_variation
+-from omnigibson.learning.utils.eval_utils import PROPRIOCEPTION_INDICES
++from b1k.shared.eval_utils_2025 import PROPRIOCEPTION_INDICES
+ 
+ logger = logging.getLogger(__name__)
+ 

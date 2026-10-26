@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "study": "SeekAct: AP navigation, champion local interactions, Qwen two-vote completion",
+  "source_repository": "git@github.com:Kouyouyi/behavior-harness.git",
+  "render_profile": "fast",
+  "variant": "original",
+  "split": "public_test",
+  "instance_id": 301,
+  "seed": 20261020,
+  "max_steps": null,
+  "session_wall_limit_seconds": null,
+  "teacher_experience": "not_supplied",
+  "success_source": "official BehaviorTask.success / BDDL",
+  "tasks": [
+    {
+      "task_index": 22,
+      "task_name": "putting_shoes_on_rack",
+      "prompt": "Pick up the two gym shoes and the two sandals from the corridor floor and place them onto the hallstand (shoe rack) in the corridor, making sure they are on the rack and not on the floor. Arrange them so the two gym shoes are next to each other and the two sandals are next to each other.",
+      "champion_skills": {
+        "putting_shoes_on_rack": 22
+      }
+    },
+    {
+      "task_index": 0,
+      "task_name": "turning_on_radio",
+      "prompt": "Turn on the radio receiver that's on the table in the living room.",
+      "champion_skills": {
+        "turning_on_radio": 0
+      }
+    },
+    {
+      "task_index": 21,
+      "task_name": "collecting_childrens_toys",
+      "prompt": "Collect the two dice from the bed, the two teddy bears from the floor, the train set from the desk, and the two board games from the desk and bed. Put all of these toys inside the same bookcase in the child's room.",
+      "champion_skills": {
+        "collecting_childrens_toys": 21
+      },
+      "champion_cross_task_transfer": false,
+      "prompt_source": {
+        "kind": "faithful English description of installed official BDDL problem0",
+        "path": "/root/BEHAVIOR-1K-complete/bddl3/bddl/activity_definitions/collecting_childrens_toys/problem0.bddl",
+        "sha256": "5c7ffb5883b200455c3ac6838aaade37ef991ac48b67850b73ae5947f7a18bba"
+      }
+    }
+  ],
+  "vla_tools": {
+    "enabled": true,
+    "ap_url": "http://127.0.0.1:18770",
+    "champion_url": "http://127.0.0.1:18778",
+    "ap_checkpoint": "/path/to/checkpoint_024000",
+    "champion_checkpoint": "checkpoint_2",
+    "champion_revision": "89545bc1b7aa7f2e687bc0032d091f132d715d4e",
+    "vla_only": true,
+    "closed_loop": true,
+    "interaction_only": true,
+    "qwen_monitor": {
+      "base_url": "http://127.0.0.1:8000/v1",
+      "api_key_file": "/path/to/private/qwen_key",
+      "model": null,
+      "check_after_each_champion_chunk": true,
+      "consecutive_completed": 2
+    }
+  },
+  "interpretation": "Three fresh original public_test301 trials, task IDs22/0/21. AP only search/view/travel; champion only local interactions. Every champion chunk (at most20steps) pauses physics for Qwen current-frame-only completion check. Two consecutive completed votes on distinct frames return to GPT and require AP. No episode timeout or total step cap.",
+  "user_scope_resolution": {
+    "task_ids": [
+      22,
+      0,
+      21
+    ],
+    "all_fresh_scenes": true,
+    "native_numeric_motion_disabled": true,
+    "wall_limit_seconds_per_task": null,
+    "total_step_budget": null
+  },
+  "closed_loop_protocol": {
+    "per_call_step_limit": null,
+    "total_physical_step_limit": null,
+    "wall_limit_seconds": null,
+    "completion_assessment": "Qwen current frame + one local interaction goal, exact 继续/已完成, two consecutive distinct-frame positives, then return GPT and require AP",
+    "champion_role": "Local interaction only, fixed unchanged policy",
+    "ap_role": "All search/view/approach/travel",
+    "frame_definition": "One contemporaneous head+left wrist+right wrist composite, no historical frames, state, BDDL or prior answers"
+  },
+  "pre_admission_validation_recovery": "Unsupported AP combinations submit no policy request and no action; inspect unchanged state, correct arguments and continue.",
+  "wall_limit_seconds": null,
+  "unlimited_duration_authorized": true
+}

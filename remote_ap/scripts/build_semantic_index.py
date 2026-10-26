@@ -1,12 +1,13 @@
+import os
 """Build goal-conditioned hindsight VLA examples, with explicit provenance and episode splits."""
 from pathlib import Path
 from collections import Counter
 from concurrent.futures import ProcessPoolExecutor,as_completed
 import sys,json,hashlib,time
 import numpy as np,pandas as pd,pyarrow.parquet as pq
-sys.path.insert(0,'/cs/kyy/behavior_full_dual_language/scripts')
+# labels.py is shipped alongside this script.
 from labels import clean_object
-ROOT=Path('/cs/datasets/behavior2026_dual_language');OUT=Path('/cs/kyy/behavior_ap_experiment');META=None
+ROOT=Path(os.environ['AP_RAW_DATA_ROOT']);OUT=Path(os.environ.get('AP_PROJECT_ROOT',str(Path.cwd()/'ap_work')));META=None
 WORDS={'turn_left':'向左转','turn_right':'向右转','forward':'向前移动','backward':'向后移动','strafe_left':'向左平移','strafe_right':'向右平移','torso_left':'向左转腰','torso_right':'向右转腰','raise_view':'抬高观察位置','lower_view':'降低观察位置','open_door':'打开门或柜门','open_drawer':'拉开抽屉','open_lid':'揭开盖子'}
 def atomic(p,obj):
  p.parent.mkdir(parents=True,exist_ok=True);t=p.with_suffix('.tmp');t.write_text(json.dumps(obj,ensure_ascii=False,indent=2));t.replace(p)

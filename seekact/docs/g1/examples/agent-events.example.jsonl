@@ -1,0 +1,10 @@
+{"id":"task-1","time":0,"task_id":"inspection-1","kind":"task","status":"running","details":{"instruction":"检查桌上的米老鼠玩偶，并报告观察结果","current_step":"观察桌面","elapsed_s":0,"simulated":true}}
+{"id":"user-1","time":0,"task_id":"inspection-1","kind":"message","role":"user","text":"检查桌上的米老鼠玩偶，并报告观察结果"}
+{"id":"plan-1","time":0,"task_id":"inspection-1","kind":"plan","text":"接口格式示例：使用合成观测，不连接机器人。","details":{"simulated":true,"steps":[{"id":"observe","label":"观察桌面","status":"running"},{"id":"report","label":"报告结果","status":"pending"}]}}
+{"id":"call-1","time":0,"task_id":"inspection-1","kind":"tool","tool":"g1_observe","status":"running","details":{"simulated":true,"arguments":{}}}
+{"id":"call-1","time":0,"task_id":"inspection-1","kind":"tool","tool":"g1_observe","status":"completed","details":{"simulated":true,"arguments":{},"result":{"frame_id":"fixture-only-not-a-real-frame","target_visible":true}}}
+{"id":"observation-1","time":0,"task_id":"inspection-1","kind":"observation","text":"合成观测样例：桌面可见目标玩偶；没有进行抓取或移动。","details":{"simulated":true}}
+{"id":"reply-1","time":0,"task_id":"inspection-1","kind":"message","role":"assistant","status":"streaming","text":"根据合成观测，桌面上可见目标玩偶。"}
+{"id":"reply-1","time":0,"task_id":"inspection-1","kind":"message","role":"assistant","status":"completed","text":"根据合成观测，桌面上可见目标玩偶。本次只演示观察报告流程，没有执行机器人动作。"}
+{"id":"plan-2","time":0,"task_id":"inspection-1","kind":"plan","text":"接口格式示例：两步报告流程已完成，物理任务未执行。","details":{"simulated":true,"steps":[{"id":"observe","label":"观察桌面","status":"completed"},{"id":"report","label":"报告结果","status":"completed"}]}}
+{"id":"task-2","time":0,"task_id":"inspection-1","kind":"task","status":"completed","details":{"instruction":"检查桌上的米老鼠玩偶，并报告观察结果","current_step":"报告完成","elapsed_s":2,"simulated":true}}

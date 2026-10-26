@@ -1,0 +1,1325 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "RAX G1 16:9 Wallboard",
+    "version": "1.0.0",
+    "description": "Local presentation and read-only observation. No physical motion or model execution."
+  },
+  "servers": [
+    {
+      "url": "/"
+    }
+  ],
+  "security": [
+    {
+      "operatorCookie": []
+    },
+    {
+      "operatorToken": []
+    }
+  ],
+  "paths": {
+    "/api/v1/state": {
+      "get": {
+        "summary": "聚合状态快照",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/State"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "State conflict or readonly mode",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/events": {
+      "get": {
+        "summary": "控制台事件增量（与只读 Agent 事件流不同）",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "events": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Event"
+                      }
+                    },
+                    "cursor": {
+                      "type": "integer"
+                    },
+                    "reset_required": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "State conflict or readonly mode",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "after",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0
+            }
+          }
+        ]
+      }
+    },
+    "/api/v1/history": {
+      "get": {
+        "summary": "已结束的演示任务",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "tasks": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Task"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "State conflict or readonly mode",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/tasks": {
+      "post": {
+        "summary": "提交演示任务（进程内 request_id 去重；只读模式拒绝）",
+        "responses": {
+          "201": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "task": {
+                      "$ref": "#/components/schemas/Task"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "State conflict or readonly mode",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TaskInput"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/tasks/{id}/actions": {
+      "post": {
+        "summary": "暂停、恢复或取消演示任务",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "task": {
+                      "$ref": "#/components/schemas/Task"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "State conflict or readonly mode",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActionInput"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/api/v1/messages": {
+      "post": {
+        "summary": "演示会话，或已配置的实机 Agent 消息收件箱；入箱不执行动作",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "accepted": {
+                      "type": "boolean"
+                    },
+                    "source": {
+                      "enum": [
+                        "demo",
+                        "operator_inbox"
+                      ]
+                    },
+                    "reply": {
+                      "type": "string"
+                    },
+                    "action": {
+                      "type": "string"
+                    },
+                    "task": {
+                      "$ref": "#/components/schemas/Task"
+                    },
+                    "message_id": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "State conflict or readonly mode",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MessageInput"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/export": {
+      "get": {
+        "summary": "下载带来源标识的会话快照",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/State"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "State conflict or readonly mode",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/schema": {
+      "get": {
+        "summary": "OpenAPI 3.1 定义",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "State conflict or readonly mode",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/camera/frame": {
+      "get": {
+        "summary": "读取已发布 PNG 帧",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "image/png": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "State conflict or readonly mode",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "frame_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{32}$"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "operatorCookie": {
+        "type": "apiKey",
+        "in": "cookie",
+        "name": "robot_dashboard_token"
+      },
+      "operatorToken": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-Operator-Token"
+      }
+    },
+    "schemas": {
+      "Error": {
+        "type": "object",
+        "required": [
+          "error"
+        ],
+        "properties": {
+          "error": {
+            "type": "string"
+          }
+        }
+      },
+      "TaskInput": {
+        "type": "object",
+        "required": [
+          "instruction",
+          "request_id"
+        ],
+        "properties": {
+          "instruction": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1000
+          },
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          }
+        }
+      },
+      "ActionInput": {
+        "type": "object",
+        "required": [
+          "action"
+        ],
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "pause",
+              "resume",
+              "cancel"
+            ]
+          }
+        }
+      },
+      "MessageInput": {
+        "type": "object",
+        "required": [
+          "text"
+        ],
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1000
+          },
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100,
+            "description": "Required for live inbox. Reuse the same ID when retrying unchanged text."
+          }
+        }
+      },
+      "Task": {
+        "type": "object",
+        "required": [
+          "id",
+          "instruction",
+          "status",
+          "source",
+          "verified",
+          "simulated_verified",
+          "stage_index",
+          "progress",
+          "elapsed_s"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "instruction": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "running",
+              "paused",
+              "completed",
+              "cancelled",
+              "interrupted"
+            ]
+          },
+          "source": {
+            "const": "demo"
+          },
+          "verified": {
+            "const": false
+          },
+          "simulated_verified": {
+            "type": "boolean"
+          },
+          "stage_index": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 5
+          },
+          "progress": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "elapsed_s": {
+            "type": "number"
+          },
+          "started_at": {
+            "type": "number"
+          },
+          "ended_at": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "interpretation": {
+            "type": "string"
+          },
+          "stage_result_index": {
+            "type": "integer",
+            "minimum": -1,
+            "maximum": 5
+          }
+        }
+      },
+      "Event": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "seq": {
+            "type": "integer"
+          },
+          "time": {
+            "type": [
+              "number",
+              "string",
+              "null"
+            ]
+          },
+          "kind": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "task_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "details": {},
+          "role": {
+            "enum": [
+              "user",
+              "assistant"
+            ]
+          },
+          "tool": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "result": {
+            "type": "object",
+            "description": "Simulated tool result in the demo conversation projection."
+          }
+        }
+      },
+      "Joint": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "group": {
+            "type": "string"
+          },
+          "case_c": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "winding_c": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "motorstate": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "fresh": {
+            "type": "boolean"
+          },
+          "max_c": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "level": {
+            "enum": [
+              "normal",
+              "warning",
+              "critical",
+              "unknown"
+            ]
+          },
+          "reason": {
+            "enum": [
+              "temperature",
+              "motor_fault",
+              "alarm_latched",
+              "stale",
+              null
+            ]
+          },
+          "alarm_latched": {
+            "type": "boolean"
+          }
+        }
+      },
+      "State": {
+        "type": "object",
+        "required": [
+          "schema_version",
+          "server_time",
+          "mode",
+          "capabilities",
+          "robot",
+          "camera",
+          "telemetry",
+          "task",
+          "stages",
+          "messages",
+          "events",
+          "history",
+          "conversation"
+        ],
+        "properties": {
+          "schema_version": {
+            "const": 1
+          },
+          "server_time": {
+            "type": "number"
+          },
+          "mode": {
+            "enum": [
+              "demo",
+              "readonly"
+            ]
+          },
+          "capabilities": {
+            "type": "object",
+            "properties": {
+              "submit_task": {
+                "type": "boolean"
+              },
+              "task_control": {
+                "type": "boolean"
+              },
+              "chat": {
+                "type": "boolean"
+              },
+              "physical_motion": {
+                "type": "boolean"
+              },
+              "agent_connected": {
+                "type": "boolean"
+              },
+              "agent_autowake": {
+                "type": "boolean",
+                "description": "Fresh background dispatcher heartbeat; new UI messages automatically start an agent turn. Does not imply robot readiness."
+              }
+            }
+          },
+          "robot": {
+            "type": "object"
+          },
+          "camera": {
+            "type": "object",
+            "properties": {
+              "source": {
+                "type": "string"
+              },
+              "fresh": {
+                "type": "boolean"
+              },
+              "url": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "frame_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "age_s": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "sampled_at": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              }
+            }
+          },
+          "telemetry": {
+            "type": "object",
+            "properties": {
+              "fresh": {
+                "type": "boolean"
+              },
+              "joints": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Joint"
+                }
+              },
+              "source": {
+                "type": "string"
+              },
+              "history": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              },
+              "thermal_rule": {
+                "enum": [
+                  "native90",
+                  "strict91"
+                ]
+              },
+              "rule_source": {
+                "enum": [
+                  "configured",
+                  "owner"
+                ]
+              },
+              "counts": {
+                "type": "object",
+                "properties": {
+                  "normal": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 29
+                  },
+                  "warning": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 29
+                  },
+                  "critical": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 29
+                  },
+                  "unknown": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 29
+                  }
+                }
+              },
+              "thresholds": {
+                "type": "object",
+                "properties": {
+                  "warning_c": {
+                    "const": 85
+                  },
+                  "critical_c": {
+                    "enum": [
+                      90,
+                      91
+                    ]
+                  },
+                  "critical_inclusive": {
+                    "type": "boolean"
+                  },
+                  "ankle_clear_below_c": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "task": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Task"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "stages": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            },
+            "description": "Legacy demo fixture steps only. The display uses conversation.task.current_step from Agent events."
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "events": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Event"
+            }
+          },
+          "history": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Task"
+            }
+          },
+          "event_cursor": {
+            "type": "integer"
+          },
+          "presentation": {
+            "type": "object",
+            "properties": {
+              "aspect_ratio": {
+                "const": "16:9"
+              },
+              "width": {
+                "const": 1920
+              },
+              "height": {
+                "const": 1080
+              },
+              "autoplay": {
+                "type": "boolean"
+              }
+            }
+          },
+          "conversation": {
+            "$ref": "#/components/schemas/Conversation"
+          }
+        }
+      },
+      "Conversation": {
+        "type": "object",
+        "description": "Public conversation projection. Demo phases are simulated. Readonly task metadata comes from Agent task envelopes; no predefined step list or inferred percentage.",
+        "required": [
+          "source",
+          "phase",
+          "task",
+          "user",
+          "summary",
+          "tool",
+          "elapsed_s",
+          "output"
+        ],
+        "properties": {
+          "source": {
+            "enum": [
+              "demo",
+              "readonly"
+            ]
+          },
+          "phase": {
+            "enum": [
+              "idle",
+              "thinking",
+              "tool",
+              "responding",
+              "paused",
+              "completed",
+              "cancelled",
+              "interrupted",
+              "observing",
+              "replied"
+            ]
+          },
+          "task": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "instruction": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              },
+              "elapsed_s": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "current_step": {
+                "type": "string"
+              }
+            }
+          },
+          "user": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "text": {
+                "type": "string"
+              },
+              "time": {
+                "type": [
+                  "number",
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "summary": {
+            "type": "string",
+            "description": "Public observation or decision summary; never private reasoning."
+          },
+          "tool": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Event"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "elapsed_s": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Demo operation elapsed time, frozen while paused."
+          },
+          "output": {
+            "type": "object",
+            "required": [
+              "id",
+              "text",
+              "streaming"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "text": {
+                "type": "string",
+                "description": "Cumulative public text; replace the same id instead of appending duplicate snapshots."
+              },
+              "streaming": {
+                "type": "boolean",
+                "description": "True for an in-progress demo prefix or a streaming message sampled within the last five seconds."
+              }
+            }
+          },
+          "history": {
+            "type": "array",
+            "maxItems": 8,
+            "description": "Previous demo chat messages, excluding the current user message and reply.",
+            "items": {
+              "type": "object"
+            }
+          },
+          "plan": {
+            "type": "array",
+            "description": "Steps for the current task. The demo uses a fixture; readonly displays the latest Agent plan event. No fixed steps are shown before a task.",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "label",
+                "status"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "status": {
+                  "enum": [
+                    "pending",
+                    "running",
+                    "completed",
+                    "failed"
+                  ]
+                }
+              }
+            }
+          },
+          "plan_note": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

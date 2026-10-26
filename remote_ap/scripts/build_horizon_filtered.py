@@ -1,8 +1,9 @@
+import os
 """Build a separate temporal-alignment dataset after the full audit completes."""
 from pathlib import Path
 import json,shutil,time
 import pandas as pd
-ROOT=Path("/cs/kyy/behavior_ap_experiment");AUDIT=ROOT/"evaluation/horizon_audit";OUT=ROOT/"training_horizon_v2"
+ROOT=Path(os.environ.get('AP_PROJECT_ROOT',str(Path.cwd()/'ap_work')));AUDIT=ROOT/"evaluation/horizon_audit";OUT=ROOT/"training_horizon_v2"
 status=json.loads((AUDIT/"status.json").read_text());assert status["status"]=="complete",status
 assert not OUT.exists(),"Use a new version; never overwrite a dataset"
 audit=pd.concat([pd.read_parquet(p) for p in AUDIT.glob("*.parquet")],ignore_index=True)
