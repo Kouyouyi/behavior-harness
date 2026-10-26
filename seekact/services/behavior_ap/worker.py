@@ -159,6 +159,7 @@ class Worker:
             ident = f'obs_{self.observations:05d}_step_{self.env.steps:06d}'
             directory = self.output / 'observations' / ident
             record = self.env.capture(directory)
+            save(self.output/'live_frame.json',record)
             base_position, base_quat = self.env.backend.robot.get_position_orientation()
             info, frames, images = {}, {}, []
             for role, sensor in self.sensors.items():

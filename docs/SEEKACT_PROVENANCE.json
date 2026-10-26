@@ -22,11 +22,12 @@
     "external_dependency": true
   },
   "verification": {
-    "seekact_unit_tests_passed": 106,
-    "python_files_ast_parsed": 356,
+    "seekact_unit_tests_passed": 109,
+    "python_files_ast_parsed": 358,
     "real_new_physical_trials_run_for_this_release": 0,
     "scope": "Packaging, unit tests, current-code dependency import and source integrity only; not a new model/physics benchmark",
-    "champion_runtime_import_verified_on_remote": true
+    "champion_runtime_import_verified_on_remote": true,
+    "wallboard_readonly_http_tests_passed": true
   },
   "deployment_path_overrides": [
     "SEEKACT_SIM_ROOT",

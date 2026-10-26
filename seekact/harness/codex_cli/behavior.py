@@ -296,6 +296,27 @@ completed in this mode. Never mistake its judgment for official BDDL success.
 The champion policy still ignores free language; interaction_goal drives the monitor,
 not the champion's internal task identity. Log safety/failed-grasp evidence honestly.
 """
+    if vla_options.get('qwen_monitor'):
+        # Remove obsolete finite-protocol text instead of relying on override order.
+        instructions = instructions.replace(
+            'The benchmark budget remains10000 total physical steps. Temporary stagnation is\nNOT an early failure criterion. Continue visual rescheduling until official BDDL\nsuccess or the physical budget is exhausted.',
+            'There is no total step budget. Temporary stagnation alone is not a stopping rule.')
+        instructions = instructions.replace(
+            'There is NO total physical-step budget. The whole trial has a3600-second wall\nclock deadline, including initialization, GPT, inference, network waits and actions.',
+            'There is no total physical-step limit and no wall-clock deadline.')
+        instructions += """
+## Explicit latest stopping rule
+Do not end because of elapsed time, total actions, number of calls or a segment's
+step_budget. A segment ending returns observation/control, not the end of the task.
+End only when official BDDL success is true OR YOU explicitly determine that you
+cannot continue. In that case call behavior_finish(outcome=blocked) with concrete
+current visual evidence, what recovery was attempted and why further execution
+cannot proceed. This can be a task capability blockage, not only a network/safety
+fault. Temporary waits and isolated no-progress segments are not such a decision.
+If the environment cannot advance, report that condition to the upper planner;
+never relabel it success or replay uncertain actions. User cancellation remains
+an external stop request, not a budget exhaustion or model capability result.
+"""
     prompt = (f'完成当前 BEHAVIOR 仿真任务。实验阶段：{phase}。\n'
               '先读取状态并观察，随后用可用工具完整执行；以官方 BDDL 状态报告结果。\n\n'
               + config.task_description + '\n')

@@ -165,6 +165,7 @@ class VlaTools:
             'closed_loop': bool(self.options.get('closed_loop')),
             'qwen_monitor_enabled':self.qwen is not None,
             'qwen_completion_streak':self.qwen_votes.streak,
+            'recent_qwen_checks':self.qwen_checks[-8:],
             'interaction_only':bool(self.options.get('interaction_only')),
             'awaiting_interaction_assessment':self.awaiting_interaction_assessment,
             'active_interaction_goal':self.active_interaction_goal,
@@ -173,6 +174,12 @@ class VlaTools:
             'ap_supported_tag_combinations': list(json.loads(Path(__file__).with_name('ap_capabilities.json').read_text())['combination_counts']),
             'job': self.summary() if self.current else None,
             'infrastructure_errors': list(self.infrastructure_errors)}
+
+    def _publish(self, observation=None):
+        # Only persists already-captured data; never queries sensors or advances physics.
+        save(self.root/'live_state.json',self.state())
+        if observation is not None:
+            save(self.worker.output/'live_frame.json',observation)
 
     def summary(self):
         j = self.current
@@ -265,6 +272,7 @@ class VlaTools:
             step=self.worker.env.steps,source='planner_visual_assessment',official_success_claim=False)
         self.handoffs.append(self.handoff);self.phase='champion'
         save(self.root/f'handoff_{len(self.handoffs):05d}.json',self.handoff)
+        self._publish()
         return {'accepted':True,'phase':self.phase,'handoff':self.handoff,'physical_steps_added':0}
 
     def assess_interaction(self, frame_id, outcome, evidence):
@@ -287,6 +295,7 @@ class VlaTools:
             self.phase='search';self.handoff=None;self.ap_required_after_step=self.worker.env.steps
             self.active_interaction_goal=None
         save(self.root/('interaction_assessment_%05d.json'%len(self.interaction_assessments)),item)
+        self._publish()
         return dict(accepted=True,assessment=item,phase=self.phase,physical_steps_added=0)
 
     def _complete(self, j, job_id):
@@ -304,6 +313,7 @@ class VlaTools:
         save(self.root/job_id/'result.json',self.summary())
         self.history.append(self.summary())
         value,images=self.worker.observe()
+        self._publish()
         return {'vla_job':self.summary(),'observation':value},images
 
     def _expire(self):
@@ -316,6 +326,7 @@ class VlaTools:
         d.mkdir(parents=True, exist_ok=False)
         with self.worker.ledger.span('vla_observation', policy=j['kind']):
             obs = self.worker.env.capture(d / 'observation')
+        j['status']='waiting_for_model'
         j.update(directory=d, observation_step=self.worker.env.steps, event=threading.Event(), response=None, error=None)
         save(d / 'job.json', self.summary())
         # Copy all inputs. Background code has no worker/env/control reference.
@@ -329,6 +340,7 @@ class VlaTools:
                 event.set()
         j['thread'] = threading.Thread(target=infer, daemon=True, name='vla-http-only')
         j['thread'].start()
+        self._publish(obs)
 
     def _launch_qwen(self):
         j=self.current
@@ -345,6 +357,7 @@ class VlaTools:
             finally:event.set()
         j['thread']=threading.Thread(target=check,daemon=True,name='qwen-http-only')
         j['thread'].start()
+        self._publish(obs)
 
     def continue_job(self, job_id, wait_seconds=20):
         j = self.current

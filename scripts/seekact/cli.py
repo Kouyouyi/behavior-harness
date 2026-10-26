@@ -53,7 +53,7 @@ def main():
     if a.command=='test':
         names=['test_behavior_qwen_monitor','test_behavior_interaction','test_behavior_closed_loop',
             'test_behavior_launcher','test_behavior_experiment','test_behavior_worker',
-            'test_behavior_vla','test_behavior_vla_only','test_behavior_video_overlay','test_behavior_video_recording','test_seekact_release']
+            'test_behavior_vla','test_behavior_vla_only','test_behavior_video_overlay','test_behavior_video_recording','test_seekact_release','test_behavior_wallboard']
         return subprocess.call([sys.executable,'-m','unittest',*['local_tests.unit.'+n for n in names]],cwd=REPO/'seekact')
 
 if __name__=='__main__':raise SystemExit(main())

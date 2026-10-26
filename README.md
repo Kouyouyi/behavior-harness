@@ -272,3 +272,27 @@ SeekAct 回归覆盖：原生控制禁用、AP语言组合、原始动作前缀�
 ## 11. 来源与许可
 
 来源、提交号、适配与验证记录见 [SEEKACT_PROVENANCE.json](docs/SEEKACT_PROVENANCE.json) 和 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。第三方许可证、论文和作者归属保留，不因系统改名而重新授予权重、官方数据或仿真资产许可。原框架快照未发现顶层 LICENSE，不能据此推断为任意许可；第三方代码仍受原作者条款约束。
+
+## 12. SeekAct 实时前台大屏
+
+`./seekactctl run` 现在会自动启动或复用本机只读大屏：
+
+**http://127.0.0.1:18887/**
+
+显示真实头部/双腕 RGB、观测物理帧与帧龄、最后动作来源、当前 VLA job
+执行进度、局部交互目标、Qwen 判定与连续计数、GPT 公开执行摘要、官方
+BDDL 状态及三任务进度。右上角可切换全屏。任务之间自动跟随当前输出，
+不使用旧视频伪装实时画面。初始化期间明确等待相机，校准不计正式任务。
+
+大屏独立运行，只读 worker 已保存的数据，不连接机器人 RPC，不导入
+Isaac，不执行运动、不触发额外传感器采集。新增 `live_frame.json` 和
+`vla/live_state.json` 在已有观测/动作批边界更新；相机内容与策略输入不变。
+网络/GPT/Qwen 等待仍冻结物理。它不是可以绕过上层直接控制运动的面板。
+
+服务绑定127.0.0.1，校验 Host，只允许白名单 GET 和当前 trial 内的图片。
+任意文件路径、外部 Host 和 POST 均拒绝。服务凭据/模型 API key 不出现在
+大屏状态中。远程查看时自行使用 SSH 本地转发，勿直接向公网开放端口。
+
+输出目录旁的 `seekact_wallboard_current.json` 指向当前实验；
+`seekact_wallboard_service.json` 记录服务 PID/URL。每轮实验的 `wallboard.json`
+记录实际大屏入口。查看器和旧静态视频页互相独立。

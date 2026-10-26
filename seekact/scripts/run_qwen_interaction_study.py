@@ -13,6 +13,8 @@ def main():
     os.environ['SEEKACT_AP_CHECKPOINT']=protocol['vla_tools']['ap_checkpoint']
     os.environ['SEEKACT_AP_URL']=protocol['vla_tools']['ap_url']
     os.environ['SEEKACT_CHAMPION_URL']=protocol['vla_tools']['champion_url']
+    from services.behavior_ap.wallboard import ensure_wallboard
+    ensure_wallboard(root)
     child=None;stop=threading.Event()
     def cancel(*_):
         stop.set()
